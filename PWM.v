@@ -2,7 +2,7 @@ module PWM(reset,clk1ms,PWM,nextState,state,counter);
 
 input reset,clk1ms;
 output reg [25:0] counter;
-//reg [25:0] counter;
+
 output reg PWM;
 output reg [1:0] nextState,state;
 
@@ -23,15 +23,14 @@ begin
 	case(state)
 	  
 	  start:begin
-	        //PWM = 0;
 					counter = 0;
 					nextState = OFF;
 				end 
 	  
 	  	OFF: 
-	  	    //PWM =0;
+	  	  
 	 begin
-			if (counter == 5'd18) 
+			if (counter == 18) 
 					begin
 					counter = 0;
 					nextState = ON;
@@ -44,9 +43,9 @@ begin
 					end 
   end
 	
-	ON://PWM =1; 
+	ON:
 	   begin 
-			if (counter == 5'd 2)
+			if (counter == 2)
 					nextState = start; 
 			else 
 				  counter <= #1 counter + 1'd1;

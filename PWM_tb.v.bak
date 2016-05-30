@@ -11,10 +11,9 @@ wire PWM_out = 1; //PWM signal out
 */
 
 initial begin
-clk1ms = 0;
-reset = 1;
-
-#20 reset = 0;
+#0 clk1ms = 0;
+#0 reset = 1;
+#3 reset = 0;
 /*clk_in = 0;*/
 $monitor($time,"clock = %b,reset = %b,state = %b, nextstate = %b, pwm =%d,counter=%d",clk1ms,reset,state,nextState,PWM, counter);
 /*$monitor($time,"clock = %b, pwm =%d",clk_in,PWM_out);
