@@ -1,0 +1,1591 @@
+TimeQuest Timing Analyzer report for PWM
+Sat Jun 04 19:29:20 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk1ms'
+ 12. Slow Model Setup: 'counter[0]$latch'
+ 13. Slow Model Hold: 'clk1ms'
+ 14. Slow Model Hold: 'counter[0]$latch'
+ 15. Slow Model Minimum Pulse Width: 'clk1ms'
+ 16. Slow Model Minimum Pulse Width: 'counter[0]$latch'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'clk1ms'
+ 25. Fast Model Setup: 'counter[0]$latch'
+ 26. Fast Model Hold: 'counter[0]$latch'
+ 27. Fast Model Hold: 'clk1ms'
+ 28. Fast Model Minimum Pulse Width: 'clk1ms'
+ 29. Fast Model Minimum Pulse Width: 'counter[0]$latch'
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; PWM                                                               ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                             ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+; Clock Name       ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets              ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+; clk1ms           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk1ms }           ;
+; counter[0]$latch ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { counter[0]$latch } ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                         ;
++------------+-----------------+------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name       ; Note                                                          ;
++------------+-----------------+------------------+---------------------------------------------------------------+
+; 172.98 MHz ; 172.98 MHz      ; counter[0]$latch ;                                                               ;
+; 531.35 MHz ; 405.02 MHz      ; clk1ms           ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------+
+; Slow Model Setup Summary                  ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; clk1ms           ; -4.860 ; -9.710        ;
+; counter[0]$latch ; -4.781 ; -98.038       ;
++------------------+--------+---------------+
+
+
++-------------------------------------------+
+; Slow Model Hold Summary                   ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; clk1ms           ; -0.845 ; -1.680        ;
+; counter[0]$latch ; -0.704 ; -2.716        ;
++------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-------------------------------------------+
+; Slow Model Minimum Pulse Width Summary    ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; clk1ms           ; -1.469 ; -3.913        ;
+; counter[0]$latch ; 0.500  ; 0.000         ;
++------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk1ms'                                                                                           ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node       ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+; -4.860 ; counter[8]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.675     ; 3.723      ;
+; -4.850 ; counter[8]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.675     ; 3.713      ;
+; -4.802 ; counter[13]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.667     ; 3.673      ;
+; -4.799 ; counter[6]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.674     ; 3.663      ;
+; -4.792 ; counter[13]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.667     ; 3.663      ;
+; -4.789 ; counter[6]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.674     ; 3.653      ;
+; -4.717 ; counter[16]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.675     ; 3.580      ;
+; -4.707 ; counter[16]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.675     ; 3.570      ;
+; -4.641 ; counter[12]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.676     ; 3.503      ;
+; -4.640 ; counter[11]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.537     ; 3.641      ;
+; -4.631 ; counter[12]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.676     ; 3.493      ;
+; -4.630 ; counter[11]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.537     ; 3.631      ;
+; -4.614 ; counter[17]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.668     ; 3.484      ;
+; -4.613 ; counter[15]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.525     ; 3.626      ;
+; -4.604 ; counter[17]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.668     ; 3.474      ;
+; -4.603 ; counter[15]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.525     ; 3.616      ;
+; -4.602 ; counter[21]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.699     ; 3.441      ;
+; -4.592 ; counter[21]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.699     ; 3.431      ;
+; -4.577 ; counter[20]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.698     ; 3.417      ;
+; -4.575 ; counter[7]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.538     ; 3.575      ;
+; -4.567 ; counter[20]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.698     ; 3.407      ;
+; -4.565 ; counter[7]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.538     ; 3.565      ;
+; -4.561 ; counter[5]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.556     ; 3.543      ;
+; -4.551 ; counter[5]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.556     ; 3.533      ;
+; -4.497 ; counter[14]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.655     ; 3.380      ;
+; -4.487 ; counter[14]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.655     ; 3.370      ;
+; -4.475 ; counter[22]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.683     ; 3.330      ;
+; -4.472 ; counter[3]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.556     ; 3.454      ;
+; -4.465 ; counter[22]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.683     ; 3.320      ;
+; -4.462 ; counter[3]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.556     ; 3.444      ;
+; -4.459 ; counter[10]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.556     ; 3.441      ;
+; -4.452 ; counter[19]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.699     ; 3.291      ;
+; -4.449 ; counter[10]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.556     ; 3.431      ;
+; -4.442 ; counter[19]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.699     ; 3.281      ;
+; -4.440 ; counter[23]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.682     ; 3.296      ;
+; -4.437 ; counter[2]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.555     ; 3.420      ;
+; -4.430 ; counter[9]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.539     ; 3.429      ;
+; -4.430 ; counter[23]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.682     ; 3.286      ;
+; -4.427 ; counter[2]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.555     ; 3.410      ;
+; -4.420 ; counter[9]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.539     ; 3.419      ;
+; -4.387 ; counter[1]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.522     ; 3.403      ;
+; -4.377 ; counter[1]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.522     ; 3.393      ;
+; -4.329 ; counter[24]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.684     ; 3.183      ;
+; -4.319 ; counter[24]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.684     ; 3.173      ;
+; -4.303 ; counter[18]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.699     ; 3.142      ;
+; -4.293 ; counter[18]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.699     ; 3.132      ;
+; -4.174 ; counter[25]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.683     ; 3.029      ;
+; -4.164 ; counter[25]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.683     ; 3.019      ;
+; -3.120 ; counter[4]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.539     ; 2.119      ;
+; -3.115 ; counter[4]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -1.539     ; 2.114      ;
+; -0.882 ; state[1]~reg0     ; state[1]~reg0 ; clk1ms           ; clk1ms      ; 1.000        ; 0.000      ; 1.920      ;
+; -0.806 ; state[1]~reg0     ; state[0]~reg0 ; clk1ms           ; clk1ms      ; 1.000        ; 0.000      ; 1.844      ;
+; -0.705 ; state[0]~reg0     ; state[1]~reg0 ; clk1ms           ; clk1ms      ; 1.000        ; 0.000      ; 1.743      ;
+; -0.700 ; state[0]~reg0     ; state[0]~reg0 ; clk1ms           ; clk1ms      ; 1.000        ; 0.000      ; 1.738      ;
+; 1.087  ; counter[0]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; 2.494      ; 1.945      ;
+; 1.097  ; counter[0]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; 2.494      ; 1.935      ;
+; 1.587  ; counter[0]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 1.000        ; 2.494      ; 1.945      ;
+; 1.597  ; counter[0]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 1.000        ; 2.494      ; 1.935      ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'counter[0]$latch'                                                                                          ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; -4.781 ; counter[2]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.128      ; 4.718      ;
+; -4.764 ; counter[2]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.127      ; 4.746      ;
+; -4.740 ; counter[3]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.127      ; 4.676      ;
+; -4.723 ; counter[3]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.126      ; 4.704      ;
+; -4.682 ; counter[2]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.128      ; 4.657      ;
+; -4.662 ; counter[4]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.144      ; 4.615      ;
+; -4.654 ; counter[2]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.001      ; 4.104      ;
+; -4.645 ; counter[4]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.143      ; 4.643      ;
+; -4.643 ; counter[1]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.161      ; 4.613      ;
+; -4.642 ; counter[2]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.129      ; 4.580      ;
+; -4.641 ; counter[3]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.127      ; 4.615      ;
+; -4.626 ; counter[1]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.160      ; 4.641      ;
+; -4.613 ; counter[3]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.000      ; 4.062      ;
+; -4.601 ; counter[3]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.128      ; 4.538      ;
+; -4.586 ; counter[2]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.120      ; 4.326      ;
+; -4.563 ; counter[4]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.144      ; 4.554      ;
+; -4.545 ; counter[3]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.119      ; 4.284      ;
+; -4.544 ; counter[1]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.161      ; 4.552      ;
+; -4.535 ; counter[4]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.017      ; 4.001      ;
+; -4.523 ; counter[4]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.145      ; 4.477      ;
+; -4.516 ; counter[1]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.034      ; 3.999      ;
+; -4.515 ; counter[6]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.009      ; 4.333      ;
+; -4.504 ; counter[1]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.162      ; 4.475      ;
+; -4.498 ; counter[6]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.008      ; 4.361      ;
+; -4.494 ; counter[5]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.127      ; 4.430      ;
+; -4.477 ; counter[5]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.126      ; 4.458      ;
+; -4.467 ; counter[4]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.136      ; 4.223      ;
+; -4.448 ; counter[1]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.153      ; 4.221      ;
+; -4.416 ; counter[6]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.009      ; 4.272      ;
+; -4.395 ; counter[5]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.127      ; 4.369      ;
+; -4.394 ; counter[8]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.008      ; 4.211      ;
+; -4.392 ; counter[2]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.144      ; 4.344      ;
+; -4.377 ; counter[8]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.007      ; 4.239      ;
+; -4.376 ; counter[6]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.010      ; 4.195      ;
+; -4.365 ; counter[2]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.113      ; 4.281      ;
+; -4.365 ; counter[7]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.145      ; 4.319      ;
+; -4.355 ; counter[5]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.128      ; 4.292      ;
+; -4.351 ; counter[3]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.143      ; 4.302      ;
+; -4.348 ; counter[7]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.144      ; 4.347      ;
+; -4.324 ; counter[3]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.112      ; 4.239      ;
+; -4.320 ; counter[6]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.001      ; 3.941      ;
+; -4.299 ; counter[5]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.119      ; 4.038      ;
+; -4.295 ; counter[8]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.008      ; 4.150      ;
+; -4.273 ; counter[4]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.160      ; 4.241      ;
+; -4.266 ; counter[7]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.145      ; 4.258      ;
+; -4.255 ; counter[8]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.009      ; 4.073      ;
+; -4.254 ; counter[1]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.177      ; 4.239      ;
+; -4.246 ; counter[4]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.129      ; 4.178      ;
+; -4.227 ; counter[1]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.146      ; 4.176      ;
+; -4.226 ; counter[7]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.146      ; 4.181      ;
+; -4.199 ; counter[8]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.000      ; 3.819      ;
+; -4.170 ; counter[7]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.137      ; 3.927      ;
+; -4.162 ; counter[9]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.144      ; 4.115      ;
+; -4.146 ; counter[2]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.030     ; 4.073      ;
+; -4.145 ; counter[9]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.143      ; 4.143      ;
+; -4.126 ; counter[6]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.025      ; 3.959      ;
+; -4.112 ; counter[2]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.143      ; 4.102      ;
+; -4.105 ; counter[5]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.143      ; 4.056      ;
+; -4.105 ; counter[3]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.031     ; 4.031      ;
+; -4.099 ; counter[6]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.006     ; 3.896      ;
+; -4.091 ; counter[2]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.144      ; 4.081      ;
+; -4.087 ; counter[10]$latch ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.127      ; 4.023      ;
+; -4.078 ; counter[5]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.112      ; 3.993      ;
+; -4.071 ; counter[3]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.142      ; 4.060      ;
+; -4.070 ; counter[10]$latch ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.126      ; 4.051      ;
+; -4.063 ; counter[9]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.144      ; 4.054      ;
+; -4.050 ; counter[3]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.143      ; 4.039      ;
+; -4.027 ; counter[4]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.014     ; 3.970      ;
+; -4.023 ; counter[2]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.121      ; 3.988      ;
+; -4.023 ; counter[9]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.145      ; 3.977      ;
+; -4.019 ; counter[16]$latch ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.008      ; 3.836      ;
+; -4.015 ; counter[5]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.000      ; 3.464      ;
+; -4.011 ; counter[2]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.144      ; 4.002      ;
+; -4.008 ; counter[1]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.003      ; 3.968      ;
+; -4.005 ; counter[8]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.024      ; 3.837      ;
+; -4.002 ; counter[16]$latch ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.007      ; 3.864      ;
+; -3.993 ; counter[4]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.159      ; 3.999      ;
+; -3.990 ; counter[11]$latch ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.146      ; 3.945      ;
+; -3.988 ; counter[10]$latch ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.127      ; 3.962      ;
+; -3.982 ; counter[3]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.120      ; 3.946      ;
+; -3.978 ; counter[8]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.007     ; 3.774      ;
+; -3.976 ; counter[7]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.161      ; 3.945      ;
+; -3.974 ; counter[1]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.176      ; 3.997      ;
+; -3.973 ; counter[11]$latch ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.145      ; 3.973      ;
+; -3.972 ; counter[4]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.160      ; 3.978      ;
+; -3.970 ; counter[3]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.143      ; 3.960      ;
+; -3.967 ; counter[9]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.136      ; 3.723      ;
+; -3.953 ; counter[1]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.177      ; 3.976      ;
+; -3.949 ; counter[7]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.130      ; 3.882      ;
+; -3.948 ; counter[10]$latch ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.128      ; 3.885      ;
+; -3.928 ; counter[2]$latch  ; counter[10]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.001      ; 3.678      ;
+; -3.920 ; counter[16]$latch ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.008      ; 3.775      ;
+; -3.904 ; counter[4]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.137      ; 3.885      ;
+; -3.896 ; counter[13]$latch ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.016      ; 3.721      ;
+; -3.892 ; counter[10]$latch ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.119      ; 3.631      ;
+; -3.892 ; counter[4]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.160      ; 3.899      ;
+; -3.891 ; counter[11]$latch ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.146      ; 3.884      ;
+; -3.887 ; counter[3]$latch  ; counter[10]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.000      ; 3.636      ;
+; -3.885 ; counter[1]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.154      ; 3.883      ;
+; -3.880 ; counter[16]$latch ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.009      ; 3.698      ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk1ms'                                                                                            ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node       ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+; -0.845 ; counter[0]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.000        ; 2.494      ; 1.935      ;
+; -0.835 ; counter[0]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.000        ; 2.494      ; 1.945      ;
+; -0.345 ; counter[0]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; 2.494      ; 1.935      ;
+; -0.335 ; counter[0]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; 2.494      ; 1.945      ;
+; 1.452  ; state[0]~reg0     ; state[0]~reg0 ; clk1ms           ; clk1ms      ; 0.000        ; 0.000      ; 1.738      ;
+; 1.457  ; state[0]~reg0     ; state[1]~reg0 ; clk1ms           ; clk1ms      ; 0.000        ; 0.000      ; 1.743      ;
+; 1.558  ; state[1]~reg0     ; state[0]~reg0 ; clk1ms           ; clk1ms      ; 0.000        ; 0.000      ; 1.844      ;
+; 1.634  ; state[1]~reg0     ; state[1]~reg0 ; clk1ms           ; clk1ms      ; 0.000        ; 0.000      ; 1.920      ;
+; 3.867  ; counter[4]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.539     ; 2.114      ;
+; 3.872  ; counter[4]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.539     ; 2.119      ;
+; 4.916  ; counter[25]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.683     ; 3.019      ;
+; 4.926  ; counter[25]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.683     ; 3.029      ;
+; 5.045  ; counter[18]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.699     ; 3.132      ;
+; 5.055  ; counter[18]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.699     ; 3.142      ;
+; 5.071  ; counter[24]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.684     ; 3.173      ;
+; 5.081  ; counter[24]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.684     ; 3.183      ;
+; 5.129  ; counter[1]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.522     ; 3.393      ;
+; 5.139  ; counter[1]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.522     ; 3.403      ;
+; 5.172  ; counter[9]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.539     ; 3.419      ;
+; 5.179  ; counter[2]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.555     ; 3.410      ;
+; 5.182  ; counter[23]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.682     ; 3.286      ;
+; 5.182  ; counter[9]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.539     ; 3.429      ;
+; 5.189  ; counter[2]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.555     ; 3.420      ;
+; 5.192  ; counter[23]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.682     ; 3.296      ;
+; 5.194  ; counter[19]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.699     ; 3.281      ;
+; 5.201  ; counter[10]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.556     ; 3.431      ;
+; 5.204  ; counter[19]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.699     ; 3.291      ;
+; 5.211  ; counter[10]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.556     ; 3.441      ;
+; 5.214  ; counter[3]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.556     ; 3.444      ;
+; 5.217  ; counter[22]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.683     ; 3.320      ;
+; 5.224  ; counter[3]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.556     ; 3.454      ;
+; 5.227  ; counter[22]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.683     ; 3.330      ;
+; 5.239  ; counter[14]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.655     ; 3.370      ;
+; 5.249  ; counter[14]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.655     ; 3.380      ;
+; 5.303  ; counter[5]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.556     ; 3.533      ;
+; 5.313  ; counter[5]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.556     ; 3.543      ;
+; 5.317  ; counter[7]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.538     ; 3.565      ;
+; 5.319  ; counter[20]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.698     ; 3.407      ;
+; 5.327  ; counter[7]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.538     ; 3.575      ;
+; 5.329  ; counter[20]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.698     ; 3.417      ;
+; 5.344  ; counter[21]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.699     ; 3.431      ;
+; 5.354  ; counter[21]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.699     ; 3.441      ;
+; 5.355  ; counter[15]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.525     ; 3.616      ;
+; 5.356  ; counter[17]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.668     ; 3.474      ;
+; 5.365  ; counter[15]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.525     ; 3.626      ;
+; 5.366  ; counter[17]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.668     ; 3.484      ;
+; 5.382  ; counter[11]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.537     ; 3.631      ;
+; 5.383  ; counter[12]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.676     ; 3.493      ;
+; 5.392  ; counter[11]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.537     ; 3.641      ;
+; 5.393  ; counter[12]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.676     ; 3.503      ;
+; 5.459  ; counter[16]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.675     ; 3.570      ;
+; 5.469  ; counter[16]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.675     ; 3.580      ;
+; 5.541  ; counter[6]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.674     ; 3.653      ;
+; 5.544  ; counter[13]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.667     ; 3.663      ;
+; 5.551  ; counter[6]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.674     ; 3.663      ;
+; 5.554  ; counter[13]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.667     ; 3.673      ;
+; 5.602  ; counter[8]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.675     ; 3.713      ;
+; 5.612  ; counter[8]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -1.675     ; 3.723      ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'counter[0]$latch'                                                                                           ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; -0.704 ; counter[0]$latch  ; counter[6]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.168      ; 3.464      ;
+; -0.390 ; counter[0]$latch  ; counter[4]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.033      ; 3.643      ;
+; -0.388 ; counter[0]$latch  ; counter[1]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.016      ; 3.628      ;
+; -0.345 ; counter[0]$latch  ; counter[3]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.050      ; 3.705      ;
+; -0.276 ; counter[0]$latch  ; counter[8]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.169      ; 3.893      ;
+; -0.224 ; counter[0]$latch  ; counter[2]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.049      ; 3.825      ;
+; -0.204 ; counter[0]$latch  ; counter[6]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.168      ; 3.464      ;
+; -0.198 ; counter[0]$latch  ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.149      ; 3.951      ;
+; -0.175 ; counter[0]$latch  ; counter[9]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.033      ; 3.858      ;
+; -0.016 ; counter[0]$latch  ; counter[11]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.031      ; 4.015      ;
+; 0.010  ; counter[0]$latch  ; counter[7]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.032      ; 4.042      ;
+; 0.083  ; counter[0]$latch  ; counter[13]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.161      ; 4.244      ;
+; 0.110  ; counter[0]$latch  ; counter[4]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.033      ; 3.643      ;
+; 0.112  ; counter[0]$latch  ; counter[1]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.016      ; 3.628      ;
+; 0.130  ; counter[0]$latch  ; counter[10]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.050      ; 4.180      ;
+; 0.155  ; counter[0]$latch  ; counter[3]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.050      ; 3.705      ;
+; 0.224  ; counter[0]$latch  ; counter[8]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.169      ; 3.893      ;
+; 0.276  ; counter[0]$latch  ; counter[2]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.049      ; 3.825      ;
+; 0.302  ; counter[0]$latch  ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.149      ; 3.951      ;
+; 0.311  ; counter[0]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.193      ; 4.504      ;
+; 0.320  ; counter[0]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.170      ; 4.490      ;
+; 0.325  ; counter[0]$latch  ; counter[9]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.033      ; 3.858      ;
+; 0.390  ; counter[0]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.193      ; 4.583      ;
+; 0.412  ; counter[0]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.192      ; 4.604      ;
+; 0.470  ; state[0]~reg0     ; counter[1]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.522      ; 1.492      ;
+; 0.484  ; counter[0]$latch  ; counter[11]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.031      ; 4.015      ;
+; 0.510  ; counter[0]$latch  ; counter[7]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.032      ; 4.042      ;
+; 0.556  ; counter[0]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.050      ; 4.606      ;
+; 0.556  ; counter[0]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.019      ; 4.575      ;
+; 0.583  ; counter[0]$latch  ; counter[13]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.161      ; 4.244      ;
+; 0.621  ; counter[0]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.162      ; 4.783      ;
+; 0.630  ; counter[0]$latch  ; counter[10]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.050      ; 4.180      ;
+; 0.653  ; counter[0]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.193      ; 4.846      ;
+; 0.659  ; counter[0]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.169      ; 4.828      ;
+; 0.756  ; state[0]~reg0     ; counter[5]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.556      ; 1.812      ;
+; 0.765  ; state[0]~reg0     ; counter[17]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.668      ; 1.933      ;
+; 0.766  ; state[0]~reg0     ; counter[13]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.667      ; 1.933      ;
+; 0.810  ; state[0]~reg0     ; counter[10]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.556      ; 1.866      ;
+; 0.811  ; counter[0]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.193      ; 4.504      ;
+; 0.820  ; counter[0]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.170      ; 4.490      ;
+; 0.847  ; state[0]~reg0     ; counter[2]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.555      ; 1.902      ;
+; 0.850  ; state[0]~reg0     ; counter[8]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.675      ; 2.025      ;
+; 0.858  ; state[0]~reg0     ; counter[6]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.674      ; 2.032      ;
+; 0.890  ; counter[0]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.193      ; 4.583      ;
+; 0.904  ; counter[0]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.178      ; 5.082      ;
+; 0.912  ; counter[0]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.192      ; 4.604      ;
+; 0.982  ; counter[0]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.177      ; 5.159      ;
+; 0.998  ; state[0]~reg0     ; counter[3]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.556      ; 2.054      ;
+; 1.043  ; counter[0]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.177      ; 5.220      ;
+; 1.049  ; state[0]~reg0     ; counter[18]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.699      ; 2.248      ;
+; 1.051  ; state[0]~reg0     ; counter[20]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.698      ; 2.249      ;
+; 1.052  ; state[0]~reg0     ; counter[19]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.699      ; 2.251      ;
+; 1.056  ; counter[0]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.050      ; 4.606      ;
+; 1.056  ; counter[0]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.019      ; 4.575      ;
+; 1.059  ; state[0]~reg0     ; counter[15]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.525      ; 2.084      ;
+; 1.061  ; state[0]~reg0     ; counter[21]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.699      ; 2.260      ;
+; 1.072  ; counter[0]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 4.176      ; 5.248      ;
+; 1.104  ; state[0]~reg0     ; counter[16]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.675      ; 2.279      ;
+; 1.112  ; state[0]~reg0     ; counter[12]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.676      ; 2.288      ;
+; 1.121  ; counter[0]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.162      ; 4.783      ;
+; 1.139  ; state[0]~reg0     ; counter[14]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.655      ; 2.294      ;
+; 1.142  ; state[0]~reg0     ; counter[4]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.539      ; 2.181      ;
+; 1.149  ; state[0]~reg0     ; counter[11]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.537      ; 2.186      ;
+; 1.151  ; state[0]~reg0     ; counter[9]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.539      ; 2.190      ;
+; 1.152  ; state[0]~reg0     ; counter[7]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.538      ; 2.190      ;
+; 1.153  ; counter[0]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.193      ; 4.846      ;
+; 1.159  ; counter[0]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.169      ; 4.828      ;
+; 1.172  ; state[0]~reg0     ; counter[22]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.683      ; 2.355      ;
+; 1.324  ; state[0]~reg0     ; counter[23]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.682      ; 2.506      ;
+; 1.341  ; state[0]~reg0     ; counter[24]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.684      ; 2.525      ;
+; 1.341  ; state[0]~reg0     ; counter[25]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 1.683      ; 2.524      ;
+; 1.404  ; counter[0]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.178      ; 5.082      ;
+; 1.482  ; counter[0]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.177      ; 5.159      ;
+; 1.543  ; counter[0]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.177      ; 5.220      ;
+; 1.572  ; counter[0]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 4.176      ; 5.248      ;
+; 1.783  ; counter[14]$latch ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 1.783      ;
+; 1.892  ; counter[25]$latch ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 1.892      ;
+; 2.115  ; counter[20]$latch ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.115      ;
+; 2.224  ; counter[6]$latch  ; counter[6]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.224      ;
+; 2.241  ; counter[19]$latch ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.241      ;
+; 2.244  ; counter[18]$latch ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.244      ;
+; 2.249  ; counter[21]$latch ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.249      ;
+; 2.271  ; counter[24]$latch ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.271      ;
+; 2.388  ; counter[11]$latch ; counter[11]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.388      ;
+; 2.393  ; counter[13]$latch ; counter[13]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.393      ;
+; 2.401  ; counter[9]$latch  ; counter[9]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.401      ;
+; 2.416  ; counter[12]$latch ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; -0.021     ; 2.395      ;
+; 2.462  ; counter[23]$latch ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.462      ;
+; 2.464  ; counter[13]$latch ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; -0.012     ; 2.452      ;
+; 2.532  ; counter[8]$latch  ; counter[8]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.532      ;
+; 2.537  ; counter[22]$latch ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.537      ;
+; 2.556  ; counter[5]$latch  ; counter[6]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.118      ; 2.674      ;
+; 2.558  ; counter[11]$latch ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.118      ; 2.676      ;
+; 2.560  ; counter[15]$latch ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.560      ;
+; 2.563  ; counter[12]$latch ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.563      ;
+; 2.610  ; counter[17]$latch ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.610      ;
+; 2.615  ; counter[19]$latch ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; -0.001     ; 2.614      ;
+; 2.631  ; counter[10]$latch ; counter[10]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 2.631      ;
+; 2.644  ; counter[14]$latch ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.044      ; 2.688      ;
+; 2.647  ; counter[23]$latch ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.002      ; 2.649      ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk1ms'                                                            ;
++--------+--------------+----------------+------------------+--------+------------+-------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target            ;
++--------+--------------+----------------+------------------+--------+------------+-------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; clk1ms ; Rise       ; clk1ms            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk1ms ; Rise       ; state[0]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk1ms ; Rise       ; state[0]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk1ms ; Rise       ; state[1]~reg0     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk1ms ; Rise       ; state[1]~reg0     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk1ms ; Rise       ; clk1ms|combout    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk1ms ; Rise       ; clk1ms|combout    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk1ms ; Rise       ; state[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk1ms ; Rise       ; state[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk1ms ; Rise       ; state[1]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk1ms ; Rise       ; state[1]~reg0|clk ;
++--------+--------------+----------------+------------------+--------+------------+-------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'counter[0]$latch'                                                                  ;
++-------+--------------+----------------+------------------+------------------+------------+--------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock            ; Clock Edge ; Target                   ;
++-------+--------------+----------------+------------------+------------------+------------+--------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; Equal0~7|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; Equal0~7|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; Equal0~7|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; Equal0~7|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; Mux2~0clkctrl|inclk[0]   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; Mux2~0clkctrl|inclk[0]   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; Mux2~0clkctrl|outclk     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; Mux2~0clkctrl|outclk     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; Mux2~0|combout           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; Mux2~0|combout           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; Mux2~0|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; Mux2~0|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[0]$latch|combout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[0]$latch|combout ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[0]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[0]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[10]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[10]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[10]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[10]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[11]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[11]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[11]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[11]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[12]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[12]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[12]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[12]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[13]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[13]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[13]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[13]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[14]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[14]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[14]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[14]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[15]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[15]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[15]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[15]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[16]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[16]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[16]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[16]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[17]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[17]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[17]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[17]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[18]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[18]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[18]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[18]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[19]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[19]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[19]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[19]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[1]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[1]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[1]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[1]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[20]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[20]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[20]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[20]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[21]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[21]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[21]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[21]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[22]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[22]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[22]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[22]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[23]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[23]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[23]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[23]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[24]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[24]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[24]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[24]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[25]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[25]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[25]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[25]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[2]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[2]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[2]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[2]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[3]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[3]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[3]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[3]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[4]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[4]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[4]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[4]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[5]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[5]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[5]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[5]$latch|datad   ;
++-------+--------------+----------------+------------------+------------------+------------+--------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Clock to Output Times                                                              ;
++---------------+------------------+--------+--------+------------+------------------+
+; Data Port     ; Clock Port       ; Rise   ; Fall   ; Clock Edge ; Clock Reference  ;
++---------------+------------------+--------+--------+------------+------------------+
+; PWM           ; clk1ms           ; 8.636  ; 8.636  ; Rise       ; clk1ms           ;
+; nextState[*]  ; clk1ms           ; 7.911  ; 7.911  ; Rise       ; clk1ms           ;
+;  nextState[0] ; clk1ms           ; 7.911  ; 7.911  ; Rise       ; clk1ms           ;
+;  nextState[1] ; clk1ms           ; 7.638  ; 7.638  ; Rise       ; clk1ms           ;
+; state[*]      ; clk1ms           ; 7.149  ; 7.149  ; Rise       ; clk1ms           ;
+;  state[0]     ; clk1ms           ; 7.120  ; 7.120  ; Rise       ; clk1ms           ;
+;  state[1]     ; clk1ms           ; 7.149  ; 7.149  ; Rise       ; clk1ms           ;
+; counter[*]    ; counter[0]$latch ; 4.224  ;        ; Rise       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ; 4.224  ;        ; Rise       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 5.508  ; 5.169  ; Rise       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 5.508  ;        ; Rise       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 5.169  ; 5.169  ; Rise       ; counter[0]$latch ;
+; counter[*]    ; counter[0]$latch ; 8.588  ; 8.588  ; Fall       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ;        ; 4.224  ; Fall       ; counter[0]$latch ;
+;  counter[1]   ; counter[0]$latch ; 7.968  ; 7.968  ; Fall       ; counter[0]$latch ;
+;  counter[2]   ; counter[0]$latch ; 8.427  ; 8.427  ; Fall       ; counter[0]$latch ;
+;  counter[3]   ; counter[0]$latch ; 8.050  ; 8.050  ; Fall       ; counter[0]$latch ;
+;  counter[4]   ; counter[0]$latch ; 8.251  ; 8.251  ; Fall       ; counter[0]$latch ;
+;  counter[5]   ; counter[0]$latch ; 8.544  ; 8.544  ; Fall       ; counter[0]$latch ;
+;  counter[6]   ; counter[0]$latch ; 8.446  ; 8.446  ; Fall       ; counter[0]$latch ;
+;  counter[7]   ; counter[0]$latch ; 8.187  ; 8.187  ; Fall       ; counter[0]$latch ;
+;  counter[8]   ; counter[0]$latch ; 8.125  ; 8.125  ; Fall       ; counter[0]$latch ;
+;  counter[9]   ; counter[0]$latch ; 8.291  ; 8.291  ; Fall       ; counter[0]$latch ;
+;  counter[10]  ; counter[0]$latch ; 8.008  ; 8.008  ; Fall       ; counter[0]$latch ;
+;  counter[11]  ; counter[0]$latch ; 7.829  ; 7.829  ; Fall       ; counter[0]$latch ;
+;  counter[12]  ; counter[0]$latch ; 8.137  ; 8.137  ; Fall       ; counter[0]$latch ;
+;  counter[13]  ; counter[0]$latch ; 8.129  ; 8.129  ; Fall       ; counter[0]$latch ;
+;  counter[14]  ; counter[0]$latch ; 8.156  ; 8.156  ; Fall       ; counter[0]$latch ;
+;  counter[15]  ; counter[0]$latch ; 8.005  ; 8.005  ; Fall       ; counter[0]$latch ;
+;  counter[16]  ; counter[0]$latch ; 8.153  ; 8.153  ; Fall       ; counter[0]$latch ;
+;  counter[17]  ; counter[0]$latch ; 8.103  ; 8.103  ; Fall       ; counter[0]$latch ;
+;  counter[18]  ; counter[0]$latch ; 7.783  ; 7.783  ; Fall       ; counter[0]$latch ;
+;  counter[19]  ; counter[0]$latch ; 8.536  ; 8.536  ; Fall       ; counter[0]$latch ;
+;  counter[20]  ; counter[0]$latch ; 8.588  ; 8.588  ; Fall       ; counter[0]$latch ;
+;  counter[21]  ; counter[0]$latch ; 7.784  ; 7.784  ; Fall       ; counter[0]$latch ;
+;  counter[22]  ; counter[0]$latch ; 8.161  ; 8.161  ; Fall       ; counter[0]$latch ;
+;  counter[23]  ; counter[0]$latch ; 8.551  ; 8.551  ; Fall       ; counter[0]$latch ;
+;  counter[24]  ; counter[0]$latch ; 8.158  ; 8.158  ; Fall       ; counter[0]$latch ;
+;  counter[25]  ; counter[0]$latch ; 8.127  ; 8.127  ; Fall       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 11.455 ; 11.455 ; Fall       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 11.455 ; 11.455 ; Fall       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 11.116 ; 11.116 ; Fall       ; counter[0]$latch ;
++---------------+------------------+--------+--------+------------+------------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++---------------+------------------+-------+-------+------------+------------------+
+; Data Port     ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++---------------+------------------+-------+-------+------------+------------------+
+; PWM           ; clk1ms           ; 8.178 ; 8.178 ; Rise       ; clk1ms           ;
+; nextState[*]  ; clk1ms           ; 7.461 ; 7.461 ; Rise       ; clk1ms           ;
+;  nextState[0] ; clk1ms           ; 7.805 ; 7.805 ; Rise       ; clk1ms           ;
+;  nextState[1] ; clk1ms           ; 7.461 ; 7.461 ; Rise       ; clk1ms           ;
+; state[*]      ; clk1ms           ; 7.120 ; 7.120 ; Rise       ; clk1ms           ;
+;  state[0]     ; clk1ms           ; 7.120 ; 7.120 ; Rise       ; clk1ms           ;
+;  state[1]     ; clk1ms           ; 7.149 ; 7.149 ; Rise       ; clk1ms           ;
+; counter[*]    ; counter[0]$latch ; 4.224 ;       ; Rise       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ; 4.224 ;       ; Rise       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 5.169 ; 5.169 ; Rise       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 5.508 ;       ; Rise       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 5.169 ; 5.169 ; Rise       ; counter[0]$latch ;
+; counter[*]    ; counter[0]$latch ; 7.783 ; 4.224 ; Fall       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ;       ; 4.224 ; Fall       ; counter[0]$latch ;
+;  counter[1]   ; counter[0]$latch ; 7.968 ; 7.968 ; Fall       ; counter[0]$latch ;
+;  counter[2]   ; counter[0]$latch ; 8.427 ; 8.427 ; Fall       ; counter[0]$latch ;
+;  counter[3]   ; counter[0]$latch ; 8.050 ; 8.050 ; Fall       ; counter[0]$latch ;
+;  counter[4]   ; counter[0]$latch ; 8.251 ; 8.251 ; Fall       ; counter[0]$latch ;
+;  counter[5]   ; counter[0]$latch ; 8.544 ; 8.544 ; Fall       ; counter[0]$latch ;
+;  counter[6]   ; counter[0]$latch ; 8.446 ; 8.446 ; Fall       ; counter[0]$latch ;
+;  counter[7]   ; counter[0]$latch ; 8.187 ; 8.187 ; Fall       ; counter[0]$latch ;
+;  counter[8]   ; counter[0]$latch ; 8.125 ; 8.125 ; Fall       ; counter[0]$latch ;
+;  counter[9]   ; counter[0]$latch ; 8.291 ; 8.291 ; Fall       ; counter[0]$latch ;
+;  counter[10]  ; counter[0]$latch ; 8.008 ; 8.008 ; Fall       ; counter[0]$latch ;
+;  counter[11]  ; counter[0]$latch ; 7.829 ; 7.829 ; Fall       ; counter[0]$latch ;
+;  counter[12]  ; counter[0]$latch ; 8.137 ; 8.137 ; Fall       ; counter[0]$latch ;
+;  counter[13]  ; counter[0]$latch ; 8.129 ; 8.129 ; Fall       ; counter[0]$latch ;
+;  counter[14]  ; counter[0]$latch ; 8.156 ; 8.156 ; Fall       ; counter[0]$latch ;
+;  counter[15]  ; counter[0]$latch ; 8.005 ; 8.005 ; Fall       ; counter[0]$latch ;
+;  counter[16]  ; counter[0]$latch ; 8.153 ; 8.153 ; Fall       ; counter[0]$latch ;
+;  counter[17]  ; counter[0]$latch ; 8.103 ; 8.103 ; Fall       ; counter[0]$latch ;
+;  counter[18]  ; counter[0]$latch ; 7.783 ; 7.783 ; Fall       ; counter[0]$latch ;
+;  counter[19]  ; counter[0]$latch ; 8.536 ; 8.536 ; Fall       ; counter[0]$latch ;
+;  counter[20]  ; counter[0]$latch ; 8.588 ; 8.588 ; Fall       ; counter[0]$latch ;
+;  counter[21]  ; counter[0]$latch ; 7.784 ; 7.784 ; Fall       ; counter[0]$latch ;
+;  counter[22]  ; counter[0]$latch ; 8.161 ; 8.161 ; Fall       ; counter[0]$latch ;
+;  counter[23]  ; counter[0]$latch ; 8.551 ; 8.551 ; Fall       ; counter[0]$latch ;
+;  counter[24]  ; counter[0]$latch ; 8.158 ; 8.158 ; Fall       ; counter[0]$latch ;
+;  counter[25]  ; counter[0]$latch ; 8.127 ; 8.127 ; Fall       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 5.169 ; 5.169 ; Fall       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 9.720 ; 5.508 ; Fall       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 5.169 ; 5.169 ; Fall       ; counter[0]$latch ;
++---------------+------------------+-------+-------+------------+------------------+
+
+
++-------------------------------------------+
+; Fast Model Setup Summary                  ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; clk1ms           ; -1.747 ; -3.490        ;
+; counter[0]$latch ; -1.229 ; -20.785       ;
++------------------+--------+---------------+
+
+
++-------------------------------------------+
+; Fast Model Hold Summary                   ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; counter[0]$latch ; -0.789 ; -9.770        ;
+; clk1ms           ; -0.632 ; -1.260        ;
++------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-------------------------------------------+
+; Fast Model Minimum Pulse Width Summary    ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; clk1ms           ; -1.222 ; -3.222        ;
+; counter[0]$latch ; 0.500  ; 0.000         ;
++------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk1ms'                                                                                           ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node       ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+; -1.747 ; counter[8]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.841     ; 1.438      ;
+; -1.743 ; counter[8]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.841     ; 1.434      ;
+; -1.732 ; counter[6]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.840     ; 1.424      ;
+; -1.728 ; counter[6]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.840     ; 1.420      ;
+; -1.714 ; counter[13]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.836     ; 1.410      ;
+; -1.710 ; counter[13]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.836     ; 1.406      ;
+; -1.673 ; counter[16]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.841     ; 1.364      ;
+; -1.669 ; counter[16]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.841     ; 1.360      ;
+; -1.654 ; counter[15]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.789     ; 1.397      ;
+; -1.650 ; counter[15]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.789     ; 1.393      ;
+; -1.631 ; counter[11]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.794     ; 1.369      ;
+; -1.627 ; counter[11]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.794     ; 1.365      ;
+; -1.624 ; counter[21]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.857     ; 1.299      ;
+; -1.624 ; counter[12]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.840     ; 1.316      ;
+; -1.622 ; counter[17]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.837     ; 1.317      ;
+; -1.620 ; counter[21]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.857     ; 1.295      ;
+; -1.620 ; counter[12]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.840     ; 1.312      ;
+; -1.618 ; counter[17]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.837     ; 1.313      ;
+; -1.615 ; counter[7]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.795     ; 1.352      ;
+; -1.611 ; counter[7]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.795     ; 1.348      ;
+; -1.609 ; counter[20]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.857     ; 1.284      ;
+; -1.606 ; counter[10]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.806     ; 1.332      ;
+; -1.605 ; counter[20]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.857     ; 1.280      ;
+; -1.602 ; counter[10]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.806     ; 1.328      ;
+; -1.600 ; counter[5]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.805     ; 1.327      ;
+; -1.596 ; counter[5]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.805     ; 1.323      ;
+; -1.596 ; counter[3]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.805     ; 1.323      ;
+; -1.592 ; counter[2]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.804     ; 1.320      ;
+; -1.592 ; counter[3]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.805     ; 1.319      ;
+; -1.588 ; counter[2]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.804     ; 1.316      ;
+; -1.571 ; counter[22]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.847     ; 1.256      ;
+; -1.567 ; counter[9]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.796     ; 1.303      ;
+; -1.567 ; counter[22]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.847     ; 1.252      ;
+; -1.565 ; counter[14]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.828     ; 1.269      ;
+; -1.563 ; counter[9]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.796     ; 1.299      ;
+; -1.561 ; counter[14]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.828     ; 1.265      ;
+; -1.549 ; counter[23]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.846     ; 1.235      ;
+; -1.545 ; counter[23]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.846     ; 1.231      ;
+; -1.538 ; counter[19]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.857     ; 1.213      ;
+; -1.534 ; counter[19]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.857     ; 1.209      ;
+; -1.534 ; counter[1]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.786     ; 1.280      ;
+; -1.530 ; counter[1]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.786     ; 1.276      ;
+; -1.490 ; counter[24]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.848     ; 1.174      ;
+; -1.489 ; counter[18]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.858     ; 1.163      ;
+; -1.486 ; counter[24]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.848     ; 1.170      ;
+; -1.485 ; counter[18]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.858     ; 1.159      ;
+; -1.433 ; counter[25]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.846     ; 1.119      ;
+; -1.429 ; counter[25]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.846     ; 1.115      ;
+; -1.064 ; counter[4]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.796     ; 0.800      ;
+; -1.053 ; counter[4]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; -0.796     ; 0.789      ;
+; 0.242  ; state[1]~reg0     ; state[1]~reg0 ; clk1ms           ; clk1ms      ; 1.000        ; 0.000      ; 0.790      ;
+; 0.256  ; state[1]~reg0     ; state[0]~reg0 ; clk1ms           ; clk1ms      ; 1.000        ; 0.000      ; 0.776      ;
+; 0.300  ; state[0]~reg0     ; state[0]~reg0 ; clk1ms           ; clk1ms      ; 1.000        ; 0.000      ; 0.732      ;
+; 0.304  ; state[0]~reg0     ; state[1]~reg0 ; clk1ms           ; clk1ms      ; 1.000        ; 0.000      ; 0.728      ;
+; 1.008  ; counter[0]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; 1.211      ; 0.735      ;
+; 1.012  ; counter[0]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.500        ; 1.211      ; 0.731      ;
+; 1.508  ; counter[0]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 1.000        ; 1.211      ; 0.735      ;
+; 1.512  ; counter[0]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 1.000        ; 1.211      ; 0.731      ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'counter[0]$latch'                                                                                          ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; -1.229 ; counter[2]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.043      ; 1.866      ;
+; -1.222 ; counter[2]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.042      ; 1.873      ;
+; -1.212 ; counter[2]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.042      ; 1.858      ;
+; -1.198 ; counter[3]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.042      ; 1.834      ;
+; -1.191 ; counter[3]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.041      ; 1.841      ;
+; -1.186 ; counter[2]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.044      ; 1.824      ;
+; -1.181 ; counter[3]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.041      ; 1.826      ;
+; -1.168 ; counter[1]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.061      ; 1.823      ;
+; -1.161 ; counter[1]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.060      ; 1.830      ;
+; -1.155 ; counter[3]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.043      ; 1.792      ;
+; -1.153 ; counter[4]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.051      ; 1.798      ;
+; -1.151 ; counter[1]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.060      ; 1.815      ;
+; -1.146 ; counter[4]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.050      ; 1.805      ;
+; -1.136 ; counter[4]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.050      ; 1.790      ;
+; -1.125 ; counter[2]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.037      ; 1.684      ;
+; -1.125 ; counter[1]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.062      ; 1.781      ;
+; -1.110 ; counter[4]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.052      ; 1.756      ;
+; -1.094 ; counter[3]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.036      ; 1.652      ;
+; -1.075 ; counter[2]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.053      ; 1.722      ;
+; -1.073 ; counter[6]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.007      ; 1.674      ;
+; -1.073 ; counter[5]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.042      ; 1.709      ;
+; -1.066 ; counter[6]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.006      ; 1.681      ;
+; -1.066 ; counter[5]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.041      ; 1.716      ;
+; -1.064 ; counter[1]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.055      ; 1.641      ;
+; -1.056 ; counter[6]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.006      ; 1.666      ;
+; -1.056 ; counter[5]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.041      ; 1.701      ;
+; -1.049 ; counter[4]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.045      ; 1.616      ;
+; -1.044 ; counter[3]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.052      ; 1.690      ;
+; -1.030 ; counter[6]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.008      ; 1.632      ;
+; -1.030 ; counter[5]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.043      ; 1.667      ;
+; -1.028 ; counter[2]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.001      ; 1.489      ;
+; -1.028 ; counter[2]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.033      ; 1.654      ;
+; -1.014 ; counter[1]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.071      ; 1.679      ;
+; -1.013 ; counter[8]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.006      ; 1.613      ;
+; -1.008 ; counter[7]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.052      ; 1.654      ;
+; -1.006 ; counter[8]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.005      ; 1.620      ;
+; -1.001 ; counter[7]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.051      ; 1.661      ;
+; -0.999 ; counter[4]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.061      ; 1.654      ;
+; -0.997 ; counter[3]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.000      ; 1.457      ;
+; -0.997 ; counter[3]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.032      ; 1.622      ;
+; -0.996 ; counter[8]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.005      ; 1.605      ;
+; -0.991 ; counter[7]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.051      ; 1.646      ;
+; -0.970 ; counter[8]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.007      ; 1.571      ;
+; -0.969 ; counter[6]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.001      ; 1.492      ;
+; -0.969 ; counter[5]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.036      ; 1.527      ;
+; -0.967 ; counter[1]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.019      ; 1.446      ;
+; -0.967 ; counter[1]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.051      ; 1.611      ;
+; -0.965 ; counter[7]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.053      ; 1.612      ;
+; -0.955 ; counter[2]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.015     ; 1.588      ;
+; -0.954 ; counter[2]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.053      ; 1.611      ;
+; -0.952 ; counter[4]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.009      ; 1.421      ;
+; -0.952 ; counter[4]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.041      ; 1.586      ;
+; -0.931 ; counter[2]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.053      ; 1.587      ;
+; -0.924 ; counter[3]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.016     ; 1.556      ;
+; -0.923 ; counter[9]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.051      ; 1.568      ;
+; -0.923 ; counter[3]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.052      ; 1.579      ;
+; -0.919 ; counter[6]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.017      ; 1.530      ;
+; -0.919 ; counter[5]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.052      ; 1.565      ;
+; -0.916 ; counter[9]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.050      ; 1.575      ;
+; -0.909 ; counter[8]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.000      ; 1.431      ;
+; -0.906 ; counter[9]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.050      ; 1.560      ;
+; -0.904 ; counter[7]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.046      ; 1.472      ;
+; -0.900 ; counter[3]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.052      ; 1.555      ;
+; -0.895 ; counter[10]$latch ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.041      ; 1.530      ;
+; -0.894 ; counter[1]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.003      ; 1.545      ;
+; -0.893 ; counter[1]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.071      ; 1.568      ;
+; -0.892 ; counter[2]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.054      ; 1.551      ;
+; -0.888 ; counter[10]$latch ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.040      ; 1.537      ;
+; -0.880 ; counter[9]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.052      ; 1.526      ;
+; -0.879 ; counter[4]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.007     ; 1.520      ;
+; -0.878 ; counter[10]$latch ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.040      ; 1.522      ;
+; -0.878 ; counter[4]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.061      ; 1.543      ;
+; -0.872 ; counter[6]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.003     ; 1.462      ;
+; -0.872 ; counter[5]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.032      ; 1.497      ;
+; -0.870 ; counter[1]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.071      ; 1.544      ;
+; -0.862 ; counter[2]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.036      ; 1.501      ;
+; -0.861 ; counter[3]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.053      ; 1.519      ;
+; -0.859 ; counter[8]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.016      ; 1.469      ;
+; -0.855 ; counter[4]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.061      ; 1.519      ;
+; -0.854 ; counter[7]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.062      ; 1.510      ;
+; -0.852 ; counter[10]$latch ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.042      ; 1.488      ;
+; -0.849 ; counter[11]$latch ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.053      ; 1.496      ;
+; -0.842 ; counter[11]$latch ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.052      ; 1.503      ;
+; -0.832 ; counter[11]$latch ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.052      ; 1.488      ;
+; -0.831 ; counter[1]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.072      ; 1.508      ;
+; -0.831 ; counter[3]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.035      ; 1.469      ;
+; -0.819 ; counter[9]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.045      ; 1.386      ;
+; -0.816 ; counter[4]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.062      ; 1.483      ;
+; -0.812 ; counter[8]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.004     ; 1.401      ;
+; -0.809 ; counter[16]$latch ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.006      ; 1.409      ;
+; -0.807 ; counter[7]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.042      ; 1.442      ;
+; -0.806 ; counter[2]$latch  ; counter[13]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.032      ; 1.449      ;
+; -0.806 ; counter[11]$latch ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.054      ; 1.454      ;
+; -0.802 ; counter[16]$latch ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.005      ; 1.416      ;
+; -0.801 ; counter[1]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.054      ; 1.458      ;
+; -0.799 ; counter[6]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.051     ; 1.396      ;
+; -0.799 ; counter[5]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; -0.016     ; 1.431      ;
+; -0.798 ; counter[6]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.017      ; 1.419      ;
+; -0.798 ; counter[5]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.052      ; 1.454      ;
+; -0.796 ; counter[2]$latch  ; counter[10]$latch ; counter[0]$latch ; counter[0]$latch ; 1.000        ; 0.002      ; 1.361      ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'counter[0]$latch'                                                                                           ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+; -0.789 ; counter[0]$latch  ; counter[6]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.051      ; 1.262      ;
+; -0.728 ; counter[0]$latch  ; counter[1]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 1.997      ; 1.269      ;
+; -0.714 ; counter[0]$latch  ; counter[3]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.016      ; 1.302      ;
+; -0.711 ; counter[0]$latch  ; counter[4]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.007      ; 1.296      ;
+; -0.651 ; counter[0]$latch  ; counter[2]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.015      ; 1.364      ;
+; -0.624 ; counter[0]$latch  ; counter[8]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.052      ; 1.428      ;
+; -0.582 ; counter[0]$latch  ; counter[9]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.007      ; 1.425      ;
+; -0.530 ; counter[0]$latch  ; counter[7]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.006      ; 1.476      ;
+; -0.527 ; counter[0]$latch  ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.039      ; 1.512      ;
+; -0.512 ; counter[0]$latch  ; counter[11]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.005      ; 1.493      ;
+; -0.475 ; counter[0]$latch  ; counter[10]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.017      ; 1.542      ;
+; -0.417 ; counter[0]$latch  ; counter[13]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.047      ; 1.630      ;
+; -0.369 ; counter[0]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.051      ; 1.682      ;
+; -0.346 ; counter[0]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.016      ; 1.670      ;
+; -0.337 ; counter[0]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.069      ; 1.732      ;
+; -0.300 ; counter[0]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.068      ; 1.768      ;
+; -0.289 ; counter[0]$latch  ; counter[6]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.051      ; 1.262      ;
+; -0.276 ; counter[0]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.068      ; 1.792      ;
+; -0.231 ; counter[0]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.000      ; 1.769      ;
+; -0.228 ; counter[0]$latch  ; counter[1]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 1.997      ; 1.269      ;
+; -0.214 ; counter[0]$latch  ; counter[3]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.016      ; 1.302      ;
+; -0.213 ; counter[0]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.048      ; 1.835      ;
+; -0.211 ; counter[0]$latch  ; counter[4]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.007      ; 1.296      ;
+; -0.187 ; counter[0]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.052      ; 1.865      ;
+; -0.165 ; counter[0]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.068      ; 1.903      ;
+; -0.151 ; counter[0]$latch  ; counter[2]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.015      ; 1.364      ;
+; -0.124 ; counter[0]$latch  ; counter[8]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.052      ; 1.428      ;
+; -0.082 ; counter[0]$latch  ; counter[9]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.007      ; 1.425      ;
+; -0.054 ; counter[0]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.059      ; 2.005      ;
+; -0.030 ; counter[0]$latch  ; counter[7]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.006      ; 1.476      ;
+; -0.027 ; counter[0]$latch  ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.039      ; 1.512      ;
+; -0.018 ; counter[0]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.057      ; 2.039      ;
+; -0.012 ; counter[0]$latch  ; counter[11]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.005      ; 1.493      ;
+; -0.011 ; counter[0]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.058      ; 2.047      ;
+; -0.003 ; counter[0]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 2.057      ; 2.054      ;
+; 0.025  ; counter[0]$latch  ; counter[10]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.017      ; 1.542      ;
+; 0.083  ; counter[0]$latch  ; counter[13]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.047      ; 1.630      ;
+; 0.131  ; counter[0]$latch  ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.051      ; 1.682      ;
+; 0.154  ; counter[0]$latch  ; counter[5]$latch  ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.016      ; 1.670      ;
+; 0.163  ; counter[0]$latch  ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.069      ; 1.732      ;
+; 0.200  ; counter[0]$latch  ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.068      ; 1.768      ;
+; 0.224  ; counter[0]$latch  ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.068      ; 1.792      ;
+; 0.269  ; counter[0]$latch  ; counter[15]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.000      ; 1.769      ;
+; 0.287  ; counter[0]$latch  ; counter[17]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.048      ; 1.835      ;
+; 0.313  ; counter[0]$latch  ; counter[16]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.052      ; 1.865      ;
+; 0.335  ; counter[0]$latch  ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.068      ; 1.903      ;
+; 0.345  ; state[0]~reg0     ; counter[1]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.786      ; 0.631      ;
+; 0.426  ; state[0]~reg0     ; counter[5]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.805      ; 0.731      ;
+; 0.429  ; state[0]~reg0     ; counter[17]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.837      ; 0.766      ;
+; 0.432  ; state[0]~reg0     ; counter[13]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.836      ; 0.768      ;
+; 0.434  ; state[0]~reg0     ; counter[2]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.804      ; 0.738      ;
+; 0.446  ; counter[0]$latch  ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.059      ; 2.005      ;
+; 0.452  ; state[0]~reg0     ; counter[10]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.806      ; 0.758      ;
+; 0.482  ; counter[0]$latch  ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.057      ; 2.039      ;
+; 0.486  ; state[0]~reg0     ; counter[8]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.841      ; 0.827      ;
+; 0.489  ; counter[0]$latch  ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.058      ; 2.047      ;
+; 0.492  ; state[0]~reg0     ; counter[6]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.840      ; 0.832      ;
+; 0.497  ; counter[0]$latch  ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; -0.500       ; 2.057      ; 2.054      ;
+; 0.523  ; state[0]~reg0     ; counter[3]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.805      ; 0.828      ;
+; 0.532  ; state[0]~reg0     ; counter[15]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.789      ; 0.821      ;
+; 0.532  ; state[0]~reg0     ; counter[20]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.857      ; 0.889      ;
+; 0.533  ; state[0]~reg0     ; counter[18]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.858      ; 0.891      ;
+; 0.533  ; state[0]~reg0     ; counter[19]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.857      ; 0.890      ;
+; 0.543  ; state[0]~reg0     ; counter[21]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.857      ; 0.900      ;
+; 0.556  ; state[0]~reg0     ; counter[16]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.841      ; 0.897      ;
+; 0.556  ; state[0]~reg0     ; counter[22]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.847      ; 0.903      ;
+; 0.586  ; state[0]~reg0     ; counter[14]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.828      ; 0.914      ;
+; 0.587  ; state[0]~reg0     ; counter[4]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.796      ; 0.883      ;
+; 0.588  ; state[0]~reg0     ; counter[12]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.840      ; 0.928      ;
+; 0.596  ; state[0]~reg0     ; counter[7]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.795      ; 0.891      ;
+; 0.596  ; state[0]~reg0     ; counter[11]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.794      ; 0.890      ;
+; 0.597  ; state[0]~reg0     ; counter[9]$latch  ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.796      ; 0.893      ;
+; 0.623  ; counter[14]$latch ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.623      ;
+; 0.635  ; state[0]~reg0     ; counter[24]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.848      ; 0.983      ;
+; 0.636  ; state[0]~reg0     ; counter[23]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.846      ; 0.982      ;
+; 0.636  ; state[0]~reg0     ; counter[25]$latch ; clk1ms           ; counter[0]$latch ; -0.500       ; 0.846      ; 0.982      ;
+; 0.665  ; counter[25]$latch ; counter[25]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.665      ;
+; 0.758  ; counter[20]$latch ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.758      ;
+; 0.784  ; counter[6]$latch  ; counter[6]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.784      ;
+; 0.786  ; counter[18]$latch ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.786      ;
+; 0.786  ; counter[19]$latch ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.786      ;
+; 0.790  ; counter[24]$latch ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.790      ;
+; 0.791  ; counter[21]$latch ; counter[21]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.791      ;
+; 0.839  ; counter[11]$latch ; counter[11]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.839      ;
+; 0.843  ; counter[9]$latch  ; counter[9]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.843      ;
+; 0.854  ; counter[13]$latch ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; -0.008     ; 0.846      ;
+; 0.857  ; counter[12]$latch ; counter[14]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; -0.012     ; 0.845      ;
+; 0.861  ; counter[13]$latch ; counter[13]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.861      ;
+; 0.866  ; counter[23]$latch ; counter[23]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.866      ;
+; 0.889  ; counter[5]$latch  ; counter[6]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.035      ; 0.924      ;
+; 0.891  ; counter[8]$latch  ; counter[8]$latch  ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.891      ;
+; 0.895  ; counter[22]$latch ; counter[22]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.895      ;
+; 0.906  ; counter[17]$latch ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.021      ; 0.927      ;
+; 0.913  ; counter[19]$latch ; counter[20]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.913      ;
+; 0.916  ; counter[14]$latch ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.030      ; 0.946      ;
+; 0.917  ; counter[12]$latch ; counter[12]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.917      ;
+; 0.920  ; counter[23]$latch ; counter[24]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.002      ; 0.922      ;
+; 0.922  ; counter[10]$latch ; counter[10]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.000      ; 0.922      ;
+; 0.926  ; counter[15]$latch ; counter[18]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; 0.069      ; 0.995      ;
+; 0.926  ; counter[18]$latch ; counter[19]$latch ; counter[0]$latch ; counter[0]$latch ; 0.000        ; -0.001     ; 0.925      ;
++--------+-------------------+-------------------+------------------+------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk1ms'                                                                                            ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node       ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+; -0.632 ; counter[0]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; 0.000        ; 1.211      ; 0.731      ;
+; -0.628 ; counter[0]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; 0.000        ; 1.211      ; 0.735      ;
+; -0.132 ; counter[0]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; 1.211      ; 0.731      ;
+; -0.128 ; counter[0]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; 1.211      ; 0.735      ;
+; 0.576  ; state[0]~reg0     ; state[1]~reg0 ; clk1ms           ; clk1ms      ; 0.000        ; 0.000      ; 0.728      ;
+; 0.580  ; state[0]~reg0     ; state[0]~reg0 ; clk1ms           ; clk1ms      ; 0.000        ; 0.000      ; 0.732      ;
+; 0.624  ; state[1]~reg0     ; state[0]~reg0 ; clk1ms           ; clk1ms      ; 0.000        ; 0.000      ; 0.776      ;
+; 0.638  ; state[1]~reg0     ; state[1]~reg0 ; clk1ms           ; clk1ms      ; 0.000        ; 0.000      ; 0.790      ;
+; 1.933  ; counter[4]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.796     ; 0.789      ;
+; 1.944  ; counter[4]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.796     ; 0.800      ;
+; 2.309  ; counter[25]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.846     ; 1.115      ;
+; 2.313  ; counter[25]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.846     ; 1.119      ;
+; 2.365  ; counter[18]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.858     ; 1.159      ;
+; 2.366  ; counter[24]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.848     ; 1.170      ;
+; 2.369  ; counter[18]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.858     ; 1.163      ;
+; 2.370  ; counter[24]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.848     ; 1.174      ;
+; 2.410  ; counter[1]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.786     ; 1.276      ;
+; 2.414  ; counter[1]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.786     ; 1.280      ;
+; 2.414  ; counter[19]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.857     ; 1.209      ;
+; 2.418  ; counter[19]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.857     ; 1.213      ;
+; 2.425  ; counter[23]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.846     ; 1.231      ;
+; 2.429  ; counter[23]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.846     ; 1.235      ;
+; 2.441  ; counter[14]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.828     ; 1.265      ;
+; 2.443  ; counter[9]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.796     ; 1.299      ;
+; 2.445  ; counter[14]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.828     ; 1.269      ;
+; 2.447  ; counter[22]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.847     ; 1.252      ;
+; 2.447  ; counter[9]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.796     ; 1.303      ;
+; 2.451  ; counter[22]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.847     ; 1.256      ;
+; 2.468  ; counter[2]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.804     ; 1.316      ;
+; 2.472  ; counter[3]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.805     ; 1.319      ;
+; 2.472  ; counter[2]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.804     ; 1.320      ;
+; 2.476  ; counter[5]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.805     ; 1.323      ;
+; 2.476  ; counter[3]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.805     ; 1.323      ;
+; 2.480  ; counter[5]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.805     ; 1.327      ;
+; 2.482  ; counter[10]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.806     ; 1.328      ;
+; 2.485  ; counter[20]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.857     ; 1.280      ;
+; 2.486  ; counter[10]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.806     ; 1.332      ;
+; 2.489  ; counter[20]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.857     ; 1.284      ;
+; 2.491  ; counter[7]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.795     ; 1.348      ;
+; 2.495  ; counter[7]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.795     ; 1.352      ;
+; 2.498  ; counter[17]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.837     ; 1.313      ;
+; 2.500  ; counter[21]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.857     ; 1.295      ;
+; 2.500  ; counter[12]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.840     ; 1.312      ;
+; 2.502  ; counter[17]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.837     ; 1.317      ;
+; 2.504  ; counter[21]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.857     ; 1.299      ;
+; 2.504  ; counter[12]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.840     ; 1.316      ;
+; 2.507  ; counter[11]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.794     ; 1.365      ;
+; 2.511  ; counter[11]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.794     ; 1.369      ;
+; 2.530  ; counter[15]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.789     ; 1.393      ;
+; 2.534  ; counter[15]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.789     ; 1.397      ;
+; 2.549  ; counter[16]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.841     ; 1.360      ;
+; 2.553  ; counter[16]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.841     ; 1.364      ;
+; 2.590  ; counter[13]$latch ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.836     ; 1.406      ;
+; 2.594  ; counter[13]$latch ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.836     ; 1.410      ;
+; 2.608  ; counter[6]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.840     ; 1.420      ;
+; 2.612  ; counter[6]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.840     ; 1.424      ;
+; 2.623  ; counter[8]$latch  ; state[0]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.841     ; 1.434      ;
+; 2.627  ; counter[8]$latch  ; state[1]~reg0 ; counter[0]$latch ; clk1ms      ; -0.500       ; -0.841     ; 1.438      ;
++--------+-------------------+---------------+------------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk1ms'                                                            ;
++--------+--------------+----------------+------------------+--------+------------+-------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target            ;
++--------+--------------+----------------+------------------+--------+------------+-------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; clk1ms ; Rise       ; clk1ms            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk1ms ; Rise       ; state[0]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk1ms ; Rise       ; state[0]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk1ms ; Rise       ; state[1]~reg0     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk1ms ; Rise       ; state[1]~reg0     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk1ms ; Rise       ; clk1ms|combout    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk1ms ; Rise       ; clk1ms|combout    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk1ms ; Rise       ; state[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk1ms ; Rise       ; state[0]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk1ms ; Rise       ; state[1]~reg0|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk1ms ; Rise       ; state[1]~reg0|clk ;
++--------+--------------+----------------+------------------+--------+------------+-------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'counter[0]$latch'                                                                  ;
++-------+--------------+----------------+------------------+------------------+------------+--------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock            ; Clock Edge ; Target                   ;
++-------+--------------+----------------+------------------+------------------+------------+--------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; Equal0~7|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; Equal0~7|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; Equal0~7|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; Equal0~7|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; Mux2~0clkctrl|inclk[0]   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; Mux2~0clkctrl|inclk[0]   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; Mux2~0clkctrl|outclk     ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; Mux2~0clkctrl|outclk     ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; Mux2~0|combout           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; Mux2~0|combout           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; Mux2~0|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; Mux2~0|datad             ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[0]$latch|combout ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[0]$latch|combout ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[0]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[0]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[10]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[10]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[10]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[10]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[11]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[11]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[11]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[11]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[12]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[12]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[12]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[12]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[13]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[13]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[13]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[13]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[14]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[14]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[14]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[14]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[15]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[15]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[15]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[15]$latch|datad  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[16]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[16]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[16]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[16]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[17]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[17]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[17]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[17]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[18]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[18]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[18]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[18]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[19]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[19]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[19]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[19]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[1]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[1]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[1]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[1]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[20]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[20]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[20]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[20]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[21]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[21]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[21]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[21]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[22]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[22]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[22]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[22]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[23]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[23]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[23]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[23]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[24]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[24]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[24]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[24]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[25]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[25]$latch        ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[25]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[25]$latch|datac  ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[2]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[2]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[2]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[2]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[3]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[3]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[3]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[3]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[4]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[4]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[4]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[4]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Fall       ; counter[5]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Fall       ; counter[5]$latch         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; counter[0]$latch ; Rise       ; counter[5]$latch|datad   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; counter[0]$latch ; Rise       ; counter[5]$latch|datad   ;
++-------+--------------+----------------+------------------+------------------+------------+--------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++---------------+------------------+-------+-------+------------+------------------+
+; Data Port     ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++---------------+------------------+-------+-------+------------+------------------+
+; PWM           ; clk1ms           ; 3.917 ; 3.917 ; Rise       ; clk1ms           ;
+; nextState[*]  ; clk1ms           ; 3.659 ; 3.659 ; Rise       ; clk1ms           ;
+;  nextState[0] ; clk1ms           ; 3.659 ; 3.659 ; Rise       ; clk1ms           ;
+;  nextState[1] ; clk1ms           ; 3.542 ; 3.542 ; Rise       ; clk1ms           ;
+; state[*]      ; clk1ms           ; 3.394 ; 3.394 ; Rise       ; clk1ms           ;
+;  state[0]     ; clk1ms           ; 3.366 ; 3.366 ; Rise       ; clk1ms           ;
+;  state[1]     ; clk1ms           ; 3.394 ; 3.394 ; Rise       ; clk1ms           ;
+; counter[*]    ; counter[0]$latch ; 1.936 ;       ; Rise       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ; 1.936 ;       ; Rise       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 2.403 ; 2.276 ; Rise       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 2.403 ;       ; Rise       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 2.276 ; 2.276 ; Rise       ; counter[0]$latch ;
+; counter[*]    ; counter[0]$latch ; 4.105 ; 4.105 ; Fall       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ;       ; 1.936 ; Fall       ; counter[0]$latch ;
+;  counter[1]   ; counter[0]$latch ; 3.836 ; 3.836 ; Fall       ; counter[0]$latch ;
+;  counter[2]   ; counter[0]$latch ; 4.034 ; 4.034 ; Fall       ; counter[0]$latch ;
+;  counter[3]   ; counter[0]$latch ; 3.890 ; 3.890 ; Fall       ; counter[0]$latch ;
+;  counter[4]   ; counter[0]$latch ; 3.935 ; 3.935 ; Fall       ; counter[0]$latch ;
+;  counter[5]   ; counter[0]$latch ; 4.056 ; 4.056 ; Fall       ; counter[0]$latch ;
+;  counter[6]   ; counter[0]$latch ; 4.023 ; 4.023 ; Fall       ; counter[0]$latch ;
+;  counter[7]   ; counter[0]$latch ; 3.895 ; 3.895 ; Fall       ; counter[0]$latch ;
+;  counter[8]   ; counter[0]$latch ; 3.896 ; 3.896 ; Fall       ; counter[0]$latch ;
+;  counter[9]   ; counter[0]$latch ; 3.978 ; 3.978 ; Fall       ; counter[0]$latch ;
+;  counter[10]  ; counter[0]$latch ; 3.865 ; 3.865 ; Fall       ; counter[0]$latch ;
+;  counter[11]  ; counter[0]$latch ; 3.752 ; 3.752 ; Fall       ; counter[0]$latch ;
+;  counter[12]  ; counter[0]$latch ; 3.899 ; 3.899 ; Fall       ; counter[0]$latch ;
+;  counter[13]  ; counter[0]$latch ; 3.895 ; 3.895 ; Fall       ; counter[0]$latch ;
+;  counter[14]  ; counter[0]$latch ; 3.917 ; 3.917 ; Fall       ; counter[0]$latch ;
+;  counter[15]  ; counter[0]$latch ; 3.860 ; 3.860 ; Fall       ; counter[0]$latch ;
+;  counter[16]  ; counter[0]$latch ; 3.908 ; 3.908 ; Fall       ; counter[0]$latch ;
+;  counter[17]  ; counter[0]$latch ; 3.880 ; 3.880 ; Fall       ; counter[0]$latch ;
+;  counter[18]  ; counter[0]$latch ; 3.764 ; 3.764 ; Fall       ; counter[0]$latch ;
+;  counter[19]  ; counter[0]$latch ; 4.079 ; 4.079 ; Fall       ; counter[0]$latch ;
+;  counter[20]  ; counter[0]$latch ; 4.105 ; 4.105 ; Fall       ; counter[0]$latch ;
+;  counter[21]  ; counter[0]$latch ; 3.763 ; 3.763 ; Fall       ; counter[0]$latch ;
+;  counter[22]  ; counter[0]$latch ; 3.912 ; 3.912 ; Fall       ; counter[0]$latch ;
+;  counter[23]  ; counter[0]$latch ; 4.085 ; 4.085 ; Fall       ; counter[0]$latch ;
+;  counter[24]  ; counter[0]$latch ; 3.910 ; 3.910 ; Fall       ; counter[0]$latch ;
+;  counter[25]  ; counter[0]$latch ; 3.896 ; 3.896 ; Fall       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 5.158 ; 5.158 ; Fall       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 5.158 ; 5.158 ; Fall       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 5.031 ; 5.031 ; Fall       ; counter[0]$latch ;
++---------------+------------------+-------+-------+------------+------------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++---------------+------------------+-------+-------+------------+------------------+
+; Data Port     ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++---------------+------------------+-------+-------+------------+------------------+
+; PWM           ; clk1ms           ; 3.759 ; 3.759 ; Rise       ; clk1ms           ;
+; nextState[*]  ; clk1ms           ; 3.480 ; 3.480 ; Rise       ; clk1ms           ;
+;  nextState[0] ; clk1ms           ; 3.615 ; 3.615 ; Rise       ; clk1ms           ;
+;  nextState[1] ; clk1ms           ; 3.480 ; 3.480 ; Rise       ; clk1ms           ;
+; state[*]      ; clk1ms           ; 3.366 ; 3.366 ; Rise       ; clk1ms           ;
+;  state[0]     ; clk1ms           ; 3.366 ; 3.366 ; Rise       ; clk1ms           ;
+;  state[1]     ; clk1ms           ; 3.394 ; 3.394 ; Rise       ; clk1ms           ;
+; counter[*]    ; counter[0]$latch ; 1.936 ;       ; Rise       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ; 1.936 ;       ; Rise       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 2.276 ; 2.276 ; Rise       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 2.403 ;       ; Rise       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 2.276 ; 2.276 ; Rise       ; counter[0]$latch ;
+; counter[*]    ; counter[0]$latch ; 3.752 ; 1.936 ; Fall       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ;       ; 1.936 ; Fall       ; counter[0]$latch ;
+;  counter[1]   ; counter[0]$latch ; 3.836 ; 3.836 ; Fall       ; counter[0]$latch ;
+;  counter[2]   ; counter[0]$latch ; 4.034 ; 4.034 ; Fall       ; counter[0]$latch ;
+;  counter[3]   ; counter[0]$latch ; 3.890 ; 3.890 ; Fall       ; counter[0]$latch ;
+;  counter[4]   ; counter[0]$latch ; 3.935 ; 3.935 ; Fall       ; counter[0]$latch ;
+;  counter[5]   ; counter[0]$latch ; 4.056 ; 4.056 ; Fall       ; counter[0]$latch ;
+;  counter[6]   ; counter[0]$latch ; 4.023 ; 4.023 ; Fall       ; counter[0]$latch ;
+;  counter[7]   ; counter[0]$latch ; 3.895 ; 3.895 ; Fall       ; counter[0]$latch ;
+;  counter[8]   ; counter[0]$latch ; 3.896 ; 3.896 ; Fall       ; counter[0]$latch ;
+;  counter[9]   ; counter[0]$latch ; 3.978 ; 3.978 ; Fall       ; counter[0]$latch ;
+;  counter[10]  ; counter[0]$latch ; 3.865 ; 3.865 ; Fall       ; counter[0]$latch ;
+;  counter[11]  ; counter[0]$latch ; 3.752 ; 3.752 ; Fall       ; counter[0]$latch ;
+;  counter[12]  ; counter[0]$latch ; 3.899 ; 3.899 ; Fall       ; counter[0]$latch ;
+;  counter[13]  ; counter[0]$latch ; 3.895 ; 3.895 ; Fall       ; counter[0]$latch ;
+;  counter[14]  ; counter[0]$latch ; 3.917 ; 3.917 ; Fall       ; counter[0]$latch ;
+;  counter[15]  ; counter[0]$latch ; 3.860 ; 3.860 ; Fall       ; counter[0]$latch ;
+;  counter[16]  ; counter[0]$latch ; 3.908 ; 3.908 ; Fall       ; counter[0]$latch ;
+;  counter[17]  ; counter[0]$latch ; 3.880 ; 3.880 ; Fall       ; counter[0]$latch ;
+;  counter[18]  ; counter[0]$latch ; 3.764 ; 3.764 ; Fall       ; counter[0]$latch ;
+;  counter[19]  ; counter[0]$latch ; 4.079 ; 4.079 ; Fall       ; counter[0]$latch ;
+;  counter[20]  ; counter[0]$latch ; 4.105 ; 4.105 ; Fall       ; counter[0]$latch ;
+;  counter[21]  ; counter[0]$latch ; 3.763 ; 3.763 ; Fall       ; counter[0]$latch ;
+;  counter[22]  ; counter[0]$latch ; 3.912 ; 3.912 ; Fall       ; counter[0]$latch ;
+;  counter[23]  ; counter[0]$latch ; 4.085 ; 4.085 ; Fall       ; counter[0]$latch ;
+;  counter[24]  ; counter[0]$latch ; 3.910 ; 3.910 ; Fall       ; counter[0]$latch ;
+;  counter[25]  ; counter[0]$latch ; 3.896 ; 3.896 ; Fall       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 2.276 ; 2.276 ; Fall       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 4.468 ; 2.403 ; Fall       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 2.276 ; 2.276 ; Fall       ; counter[0]$latch ;
++---------------+------------------+-------+-------+------------+------------------+
+
+
++----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                              ;
++-------------------+----------+--------+----------+---------+---------------------+
+; Clock             ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack  ; -4.860   ; -0.845 ; N/A      ; N/A     ; -1.469              ;
+;  clk1ms           ; -4.860   ; -0.845 ; N/A      ; N/A     ; -1.469              ;
+;  counter[0]$latch ; -4.781   ; -0.789 ; N/A      ; N/A     ; 0.500               ;
+; Design-wide TNS   ; -107.748 ; -11.03 ; 0.0      ; 0.0     ; -3.913              ;
+;  clk1ms           ; -9.710   ; -1.680 ; N/A      ; N/A     ; -3.913              ;
+;  counter[0]$latch ; -98.038  ; -9.770 ; N/A      ; N/A     ; 0.000               ;
++-------------------+----------+--------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Clock to Output Times                                                              ;
++---------------+------------------+--------+--------+------------+------------------+
+; Data Port     ; Clock Port       ; Rise   ; Fall   ; Clock Edge ; Clock Reference  ;
++---------------+------------------+--------+--------+------------+------------------+
+; PWM           ; clk1ms           ; 8.636  ; 8.636  ; Rise       ; clk1ms           ;
+; nextState[*]  ; clk1ms           ; 7.911  ; 7.911  ; Rise       ; clk1ms           ;
+;  nextState[0] ; clk1ms           ; 7.911  ; 7.911  ; Rise       ; clk1ms           ;
+;  nextState[1] ; clk1ms           ; 7.638  ; 7.638  ; Rise       ; clk1ms           ;
+; state[*]      ; clk1ms           ; 7.149  ; 7.149  ; Rise       ; clk1ms           ;
+;  state[0]     ; clk1ms           ; 7.120  ; 7.120  ; Rise       ; clk1ms           ;
+;  state[1]     ; clk1ms           ; 7.149  ; 7.149  ; Rise       ; clk1ms           ;
+; counter[*]    ; counter[0]$latch ; 4.224  ;        ; Rise       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ; 4.224  ;        ; Rise       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 5.508  ; 5.169  ; Rise       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 5.508  ;        ; Rise       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 5.169  ; 5.169  ; Rise       ; counter[0]$latch ;
+; counter[*]    ; counter[0]$latch ; 8.588  ; 8.588  ; Fall       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ;        ; 4.224  ; Fall       ; counter[0]$latch ;
+;  counter[1]   ; counter[0]$latch ; 7.968  ; 7.968  ; Fall       ; counter[0]$latch ;
+;  counter[2]   ; counter[0]$latch ; 8.427  ; 8.427  ; Fall       ; counter[0]$latch ;
+;  counter[3]   ; counter[0]$latch ; 8.050  ; 8.050  ; Fall       ; counter[0]$latch ;
+;  counter[4]   ; counter[0]$latch ; 8.251  ; 8.251  ; Fall       ; counter[0]$latch ;
+;  counter[5]   ; counter[0]$latch ; 8.544  ; 8.544  ; Fall       ; counter[0]$latch ;
+;  counter[6]   ; counter[0]$latch ; 8.446  ; 8.446  ; Fall       ; counter[0]$latch ;
+;  counter[7]   ; counter[0]$latch ; 8.187  ; 8.187  ; Fall       ; counter[0]$latch ;
+;  counter[8]   ; counter[0]$latch ; 8.125  ; 8.125  ; Fall       ; counter[0]$latch ;
+;  counter[9]   ; counter[0]$latch ; 8.291  ; 8.291  ; Fall       ; counter[0]$latch ;
+;  counter[10]  ; counter[0]$latch ; 8.008  ; 8.008  ; Fall       ; counter[0]$latch ;
+;  counter[11]  ; counter[0]$latch ; 7.829  ; 7.829  ; Fall       ; counter[0]$latch ;
+;  counter[12]  ; counter[0]$latch ; 8.137  ; 8.137  ; Fall       ; counter[0]$latch ;
+;  counter[13]  ; counter[0]$latch ; 8.129  ; 8.129  ; Fall       ; counter[0]$latch ;
+;  counter[14]  ; counter[0]$latch ; 8.156  ; 8.156  ; Fall       ; counter[0]$latch ;
+;  counter[15]  ; counter[0]$latch ; 8.005  ; 8.005  ; Fall       ; counter[0]$latch ;
+;  counter[16]  ; counter[0]$latch ; 8.153  ; 8.153  ; Fall       ; counter[0]$latch ;
+;  counter[17]  ; counter[0]$latch ; 8.103  ; 8.103  ; Fall       ; counter[0]$latch ;
+;  counter[18]  ; counter[0]$latch ; 7.783  ; 7.783  ; Fall       ; counter[0]$latch ;
+;  counter[19]  ; counter[0]$latch ; 8.536  ; 8.536  ; Fall       ; counter[0]$latch ;
+;  counter[20]  ; counter[0]$latch ; 8.588  ; 8.588  ; Fall       ; counter[0]$latch ;
+;  counter[21]  ; counter[0]$latch ; 7.784  ; 7.784  ; Fall       ; counter[0]$latch ;
+;  counter[22]  ; counter[0]$latch ; 8.161  ; 8.161  ; Fall       ; counter[0]$latch ;
+;  counter[23]  ; counter[0]$latch ; 8.551  ; 8.551  ; Fall       ; counter[0]$latch ;
+;  counter[24]  ; counter[0]$latch ; 8.158  ; 8.158  ; Fall       ; counter[0]$latch ;
+;  counter[25]  ; counter[0]$latch ; 8.127  ; 8.127  ; Fall       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 11.455 ; 11.455 ; Fall       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 11.455 ; 11.455 ; Fall       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 11.116 ; 11.116 ; Fall       ; counter[0]$latch ;
++---------------+------------------+--------+--------+------------+------------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++---------------+------------------+-------+-------+------------+------------------+
+; Data Port     ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++---------------+------------------+-------+-------+------------+------------------+
+; PWM           ; clk1ms           ; 3.759 ; 3.759 ; Rise       ; clk1ms           ;
+; nextState[*]  ; clk1ms           ; 3.480 ; 3.480 ; Rise       ; clk1ms           ;
+;  nextState[0] ; clk1ms           ; 3.615 ; 3.615 ; Rise       ; clk1ms           ;
+;  nextState[1] ; clk1ms           ; 3.480 ; 3.480 ; Rise       ; clk1ms           ;
+; state[*]      ; clk1ms           ; 3.366 ; 3.366 ; Rise       ; clk1ms           ;
+;  state[0]     ; clk1ms           ; 3.366 ; 3.366 ; Rise       ; clk1ms           ;
+;  state[1]     ; clk1ms           ; 3.394 ; 3.394 ; Rise       ; clk1ms           ;
+; counter[*]    ; counter[0]$latch ; 1.936 ;       ; Rise       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ; 1.936 ;       ; Rise       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 2.276 ; 2.276 ; Rise       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 2.403 ;       ; Rise       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 2.276 ; 2.276 ; Rise       ; counter[0]$latch ;
+; counter[*]    ; counter[0]$latch ; 3.752 ; 1.936 ; Fall       ; counter[0]$latch ;
+;  counter[0]   ; counter[0]$latch ;       ; 1.936 ; Fall       ; counter[0]$latch ;
+;  counter[1]   ; counter[0]$latch ; 3.836 ; 3.836 ; Fall       ; counter[0]$latch ;
+;  counter[2]   ; counter[0]$latch ; 4.034 ; 4.034 ; Fall       ; counter[0]$latch ;
+;  counter[3]   ; counter[0]$latch ; 3.890 ; 3.890 ; Fall       ; counter[0]$latch ;
+;  counter[4]   ; counter[0]$latch ; 3.935 ; 3.935 ; Fall       ; counter[0]$latch ;
+;  counter[5]   ; counter[0]$latch ; 4.056 ; 4.056 ; Fall       ; counter[0]$latch ;
+;  counter[6]   ; counter[0]$latch ; 4.023 ; 4.023 ; Fall       ; counter[0]$latch ;
+;  counter[7]   ; counter[0]$latch ; 3.895 ; 3.895 ; Fall       ; counter[0]$latch ;
+;  counter[8]   ; counter[0]$latch ; 3.896 ; 3.896 ; Fall       ; counter[0]$latch ;
+;  counter[9]   ; counter[0]$latch ; 3.978 ; 3.978 ; Fall       ; counter[0]$latch ;
+;  counter[10]  ; counter[0]$latch ; 3.865 ; 3.865 ; Fall       ; counter[0]$latch ;
+;  counter[11]  ; counter[0]$latch ; 3.752 ; 3.752 ; Fall       ; counter[0]$latch ;
+;  counter[12]  ; counter[0]$latch ; 3.899 ; 3.899 ; Fall       ; counter[0]$latch ;
+;  counter[13]  ; counter[0]$latch ; 3.895 ; 3.895 ; Fall       ; counter[0]$latch ;
+;  counter[14]  ; counter[0]$latch ; 3.917 ; 3.917 ; Fall       ; counter[0]$latch ;
+;  counter[15]  ; counter[0]$latch ; 3.860 ; 3.860 ; Fall       ; counter[0]$latch ;
+;  counter[16]  ; counter[0]$latch ; 3.908 ; 3.908 ; Fall       ; counter[0]$latch ;
+;  counter[17]  ; counter[0]$latch ; 3.880 ; 3.880 ; Fall       ; counter[0]$latch ;
+;  counter[18]  ; counter[0]$latch ; 3.764 ; 3.764 ; Fall       ; counter[0]$latch ;
+;  counter[19]  ; counter[0]$latch ; 4.079 ; 4.079 ; Fall       ; counter[0]$latch ;
+;  counter[20]  ; counter[0]$latch ; 4.105 ; 4.105 ; Fall       ; counter[0]$latch ;
+;  counter[21]  ; counter[0]$latch ; 3.763 ; 3.763 ; Fall       ; counter[0]$latch ;
+;  counter[22]  ; counter[0]$latch ; 3.912 ; 3.912 ; Fall       ; counter[0]$latch ;
+;  counter[23]  ; counter[0]$latch ; 4.085 ; 4.085 ; Fall       ; counter[0]$latch ;
+;  counter[24]  ; counter[0]$latch ; 3.910 ; 3.910 ; Fall       ; counter[0]$latch ;
+;  counter[25]  ; counter[0]$latch ; 3.896 ; 3.896 ; Fall       ; counter[0]$latch ;
+; nextState[*]  ; counter[0]$latch ; 2.276 ; 2.276 ; Fall       ; counter[0]$latch ;
+;  nextState[0] ; counter[0]$latch ; 4.468 ; 2.403 ; Fall       ; counter[0]$latch ;
+;  nextState[1] ; counter[0]$latch ; 2.276 ; 2.276 ; Fall       ; counter[0]$latch ;
++---------------+------------------+-------+-------+------------+------------------+
+
+
++---------------------------------------------------------------------------------+
+; Setup Transfers                                                                 ;
++------------------+------------------+----------+----------+----------+----------+
+; From Clock       ; To Clock         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------+------------------+----------+----------+----------+----------+
+; clk1ms           ; clk1ms           ; 4        ; 0        ; 0        ; 0        ;
+; counter[0]$latch ; clk1ms           ; 2        ; 52       ; 0        ; 0        ;
+; clk1ms           ; counter[0]$latch ; 0        ; 0        ; 25       ; 0        ;
+; counter[0]$latch ; counter[0]$latch ; 0        ; 0        ; 25       ; 350      ;
++------------------+------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------+
+; Hold Transfers                                                                  ;
++------------------+------------------+----------+----------+----------+----------+
+; From Clock       ; To Clock         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------+------------------+----------+----------+----------+----------+
+; clk1ms           ; clk1ms           ; 4        ; 0        ; 0        ; 0        ;
+; counter[0]$latch ; clk1ms           ; 2        ; 52       ; 0        ; 0        ;
+; clk1ms           ; counter[0]$latch ; 0        ; 0        ; 25       ; 0        ;
+; counter[0]$latch ; counter[0]$latch ; 0        ; 0        ; 25       ; 350      ;
++------------------+------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 2     ; 2    ;
+; Unconstrained Output Ports      ; 31    ; 31   ;
+; Unconstrained Output Port Paths ; 86    ; 86   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jun 04 19:29:19 2016
+Info: Command: quartus_sta PWM -c PWM
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 26 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'PWM.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name counter[0]$latch counter[0]$latch
+    Info (332105): create_clock -period 1.000 -name clk1ms clk1ms
+Warning (332191): Clock target counter[0]$latch of clock counter[0]$latch is fed by another target of the same clock.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.860
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.860        -9.710 clk1ms 
+    Info (332119):    -4.781       -98.038 counter[0]$latch 
+Info (332146): Worst-case hold slack is -0.845
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.845        -1.680 clk1ms 
+    Info (332119):    -0.704        -2.716 counter[0]$latch 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.469
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.469        -3.913 clk1ms 
+    Info (332119):     0.500         0.000 counter[0]$latch 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Warning (332191): Clock target counter[0]$latch of clock counter[0]$latch is fed by another target of the same clock.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.747
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.747        -3.490 clk1ms 
+    Info (332119):    -1.229       -20.785 counter[0]$latch 
+Info (332146): Worst-case hold slack is -0.789
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.789        -9.770 counter[0]$latch 
+    Info (332119):    -0.632        -1.260 clk1ms 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -3.222 clk1ms 
+    Info (332119):     0.500         0.000 counter[0]$latch 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 454 megabytes
+    Info: Processing ended: Sat Jun 04 19:29:20 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

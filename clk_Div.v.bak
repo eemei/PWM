@@ -1,0 +1,23 @@
+module clk_Div(
+	input clock, reset,
+	output reg clkOut
+	);
+	
+
+	reg [25:0] count = 25000000;
+	
+	//clock count and dislay on LED
+	always@(posedge clock , posedge reset)
+	begin
+		if(reset)
+			count <= 25000000;
+		else if(count == 0)
+			begin
+			delay <= ~delay;
+			count <= 25000000;
+			end
+		else
+			count <= count - 1;
+	end					
+	
+endmodule
