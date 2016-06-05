@@ -1,38 +1,13 @@
-|PWM
-reset => state[0]~reg0.ACLR
-reset => state[1]~reg0.ACLR
-clk1ms => state[0]~reg0.CLK
-clk1ms => state[1]~reg0.CLK
-PWM <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-nextState[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-nextState[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-counter[0] <= counter[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[1] <= counter[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[2] <= counter[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[3] <= counter[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[4] <= counter[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[5] <= counter[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[6] <= counter[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[7] <= counter[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[8] <= counter[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[9] <= counter[9]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[10] <= counter[10]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[11] <= counter[11]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[12] <= counter[12]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[13] <= counter[13]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[14] <= counter[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[15] <= counter[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[16] <= counter[16]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[17] <= counter[17]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[18] <= counter[18]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[19] <= counter[19]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[20] <= counter[20]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[21] <= counter[21]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[22] <= counter[22]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[23] <= counter[23]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[24] <= counter[24]$latch.DB_MAX_OUTPUT_PORT_TYPE
-counter[25] <= counter[25]$latch.DB_MAX_OUTPUT_PORT_TYPE
+|SimplePWM
+clk_in => counter[0].CLK
+clk_in => counter[1].CLK
+clk_in => counter[2].CLK
+clk_in => counter[3].CLK
+clk_in => counter[4].CLK
+clk_in => counter[5].CLK
+clk_in => counter[6].CLK
+clk_in => counter[7].CLK
+clk_in => PWM_out~reg0.CLK
+PWM_out <= PWM_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
