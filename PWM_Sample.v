@@ -1,4 +1,4 @@
-module PWM(
+module PWM_Sample(
 	input [3:0] period, duty,
 	input startPWM, resetPWM, clock,
 	output reg out,
