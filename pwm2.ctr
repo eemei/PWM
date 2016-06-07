@@ -3,7 +3,7 @@ set_attribute .OPERATORS.counter_up_sclear_aclear_clock_5.INTERFACE.clock -name 
 CLOCK_CYCLE "100.000000" .work.pwm2.INTERFACE.clock
 PULSE_WIDTH "50.000000" .work.pwm2.INTERFACE.clock
 set_attribute .work.pwm2.INTERFACE.reset -name INPUT_MAX_LOAD -value 0.1 -port
-set_attribute .work.pwm2.INTERFACE.reset -name ARRIVAL_TIME -value 1.8 -port
+set_attribute .work.pwm2.INTERFACE.reset -name ARRIVAL_TIME -value 18 -port
 set_attribute .work.pwm2.INTERFACE.reset -name MAX_TRANS_RISE -value 0.5 -port
 set_attribute .work.pwm2.INTERFACE.reset -name MAX_TRANS_FALL -value 0.5 -port
 set_attribute .work.pwm2.INTERFACE.clock -name CLOCK_CYCLE -value 100.000000 -port
