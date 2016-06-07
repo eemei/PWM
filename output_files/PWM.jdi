@@ -1,1 +1,8 @@
-<sld_project_info/>
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="9bb4d033c3d21233df82"/>
+  </project>
+  <file_info>
+    <file device="EP2C20F484C7" path="PWM.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+</sld_project_info>
