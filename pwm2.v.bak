@@ -2,8 +2,8 @@ module pwm2(reset, clock, PWM,counter);
 	input reset, clock;
 	output PWM;
 	reg PWM;
-	output[31:0] counter;
-	reg [31:0] counter;
+	output[4:0] counter;
+	reg [4:0] counter;
 
 /* counter */
 always@(posedge clock, posedge reset) begin
@@ -13,7 +13,7 @@ always@(posedge clock, posedge reset) begin
 		  counter = 0;
 		  PWM = 0;
 		  end 
-		else 
+	else 
 		begin
 		 if (counter >= 2)
 		  PWM =0;
@@ -25,8 +25,7 @@ always@(posedge clock, posedge reset) begin
 		   counter = 0;
 		  else
 		    counter = counter +1;
-		  	    
-end
+	end
 end
 
 

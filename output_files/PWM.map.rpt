@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PWM
-Tue Jun 07 13:51:11 2016
+Tue Jun 07 15:13:58 2016
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 07 13:51:11 2016   ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 07 15:13:58 2016   ;
 ; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name                      ; PWM                                     ;
 ; Top-level Entity Name              ; pwm2                                    ;
 ; Family                             ; Cyclone II                              ;
-; Total logic elements               ; 45                                      ;
-;     Total combinational functions  ; 45                                      ;
-;     Dedicated logic registers      ; 33                                      ;
-; Total registers                    ; 33                                      ;
-; Total pins                         ; 35                                      ;
+; Total logic elements               ; 8                                       ;
+;     Total combinational functions  ; 8                                       ;
+;     Dedicated logic registers      ; 6                                       ;
+; Total registers                    ; 6                                       ;
+; Total pins                         ; 8                                       ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                       ;
@@ -161,27 +161,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 45    ;
+; Estimated Total logic elements              ; 8     ;
 ;                                             ;       ;
-; Total combinational functions               ; 45    ;
+; Total combinational functions               ; 8     ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 12    ;
+;     -- 4 input functions                    ; 2     ;
 ;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 33    ;
+;     -- <=2 input functions                  ; 6     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 14    ;
-;     -- arithmetic mode                      ; 31    ;
+;     -- normal mode                          ; 4     ;
+;     -- arithmetic mode                      ; 4     ;
 ;                                             ;       ;
-; Total registers                             ; 33    ;
-;     -- Dedicated logic registers            ; 33    ;
+; Total registers                             ; 6     ;
+;     -- Dedicated logic registers            ; 6     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 35    ;
+; I/O pins                                    ; 8     ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 33    ;
-; Total fan-out                               ; 277   ;
-; Average fan-out                             ; 2.45  ;
+; Maximum fan-out                             ; 6     ;
+; Total fan-out                               ; 48    ;
+; Average fan-out                             ; 2.18  ;
 +---------------------------------------------+-------+
 
 
@@ -190,7 +190,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |pwm2                      ; 45 (45)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |pwm2               ; work         ;
+; |pwm2                      ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |pwm2               ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -200,10 +200,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 33    ;
-; Number of registers using Synchronous Clear  ; 32    ;
+; Total registers                              ; 6     ;
+; Number of registers using Synchronous Clear  ; 5     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 33    ;
+; Number of registers using Asynchronous Clear ; 6     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -216,7 +216,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Tue Jun 07 13:51:10 2016
+    Info: Processing started: Tue Jun 07 15:13:57 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PWM -c PWM
 Info: Found 1 design units, including 1 entities, in source file pwm_sample.v
     Info: Found entity 1: PWM_Sample
@@ -235,17 +235,18 @@ Info: Found 1 design units, including 1 entities, in source file pwm2.v
 Info: Found 1 design units, including 1 entities, in source file pwm_tb2.v
     Info: Found entity 1: PWM_tb2
 Info: Elaborating entity "pwm2" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at pwm2.v(27): truncated value with size 32 to match size of target (5)
 Warning: Ignored assignments for entity "SimplePWM" -- entity does not exist in design
     Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity SimplePWM -section_id "Root Region" was ignored
     Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity SimplePWM -section_id "Root Region" was ignored
 Info: Generated suppressed messages file C:/Users/Student/Desktop/PWM/output_files/PWM.map.smsg
-Info: Implemented 80 device resources after synthesis - the final resource count might be different
+Info: Implemented 16 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
-    Info: Implemented 33 output pins
-    Info: Implemented 45 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 195 megabytes
-    Info: Processing ended: Tue Jun 07 13:51:11 2016
+    Info: Implemented 6 output pins
+    Info: Implemented 8 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 194 megabytes
+    Info: Processing ended: Tue Jun 07 15:13:58 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

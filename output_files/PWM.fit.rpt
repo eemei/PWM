@@ -1,5 +1,5 @@
 Fitter report for PWM
-Tue Jun 07 13:51:14 2016
+Tue Jun 07 15:14:01 2016
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -61,18 +61,18 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +------------------------------------+-----------------------------------------+
-; Fitter Status                      ; Successful - Tue Jun 07 13:51:14 2016   ;
+; Fitter Status                      ; Successful - Tue Jun 07 15:14:01 2016   ;
 ; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name                      ; PWM                                     ;
 ; Top-level Entity Name              ; pwm2                                    ;
 ; Family                             ; Cyclone II                              ;
 ; Device                             ; EP2C20F484C7                            ;
 ; Timing Models                      ; Final                                   ;
-; Total logic elements               ; 45 / 18,752 ( < 1 % )                   ;
-;     Total combinational functions  ; 45 / 18,752 ( < 1 % )                   ;
-;     Dedicated logic registers      ; 33 / 18,752 ( < 1 % )                   ;
-; Total registers                    ; 33                                      ;
-; Total pins                         ; 35 / 315 ( 11 % )                       ;
+; Total logic elements               ; 8 / 18,752 ( < 1 % )                    ;
+;     Total combinational functions  ; 8 / 18,752 ( < 1 % )                    ;
+;     Dedicated logic registers      ; 6 / 18,752 ( < 1 % )                    ;
+; Total registers                    ; 6                                       ;
+; Total pins                         ; 8 / 315 ( 3 % )                         ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                          ;
@@ -150,8 +150,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                    ; Value              ;
 +-------------------------+--------------------+
 ; Placement               ;                    ;
-;     -- Requested        ; 0 / 119 ( 0.00 % ) ;
-;     -- Achieved         ; 0 / 119 ( 0.00 % ) ;
+;     -- Requested        ; 0 / 28 ( 0.00 % )  ;
+;     -- Achieved         ; 0 / 28 ( 0.00 % )  ;
 ;                         ;                    ;
 ; Routing (by Connection) ;                    ;
 ;     -- Requested        ; 0 / 0 ( 0.00 % )   ;
@@ -173,7 +173,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
-; Top            ; 119     ; 0                 ; N/A                     ; Source File       ;
+; Top            ; 28      ; 0                 ; N/A                     ; Source File       ;
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
@@ -183,54 +183,54 @@ Parallel compilation was disabled, but you have multiple processors available. E
 The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.pin.
 
 
-+---------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                       ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Total logic elements                        ; 45 / 18,752 ( < 1 % ) ;
-;     -- Combinational with no register       ; 12                    ;
-;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 33                    ;
-;                                             ;                       ;
-; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 12                    ;
-;     -- 3 input functions                    ; 0                     ;
-;     -- <=2 input functions                  ; 33                    ;
-;     -- Register only                        ; 0                     ;
-;                                             ;                       ;
-; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 14                    ;
-;     -- arithmetic mode                      ; 31                    ;
-;                                             ;                       ;
-; Total registers*                            ; 33 / 19,649 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 33 / 18,752 ( < 1 % ) ;
-;     -- I/O registers                        ; 0 / 897 ( 0 % )       ;
-;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 4 / 1,172 ( < 1 % )   ;
-; User inserted logic elements                ; 0                     ;
-; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 35 / 315 ( 11 % )     ;
-;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
-; Global signals                              ; 2                     ;
-; M4Ks                                        ; 0 / 52 ( 0 % )        ;
-; Total block memory bits                     ; 0 / 239,616 ( 0 % )   ;
-; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )   ;
-; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )        ;
-; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global clocks                               ; 2 / 16 ( 13 % )       ;
-; JTAGs                                       ; 0 / 1 ( 0 % )         ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 1%          ;
-; Maximum fan-out node                        ; clock~clkctrl         ;
-; Maximum fan-out                             ; 33                    ;
-; Highest non-global fan-out signal           ; LessThan1~10          ;
-; Highest non-global fan-out                  ; 32                    ;
-; Total fan-out                               ; 279                   ;
-; Average fan-out                             ; 2.36                  ;
-+---------------------------------------------+-----------------------+
++--------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                      ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Total logic elements                        ; 8 / 18,752 ( < 1 % ) ;
+;     -- Combinational with no register       ; 2                    ;
+;     -- Register only                        ; 0                    ;
+;     -- Combinational with a register        ; 6                    ;
+;                                             ;                      ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 2                    ;
+;     -- 3 input functions                    ; 0                    ;
+;     -- <=2 input functions                  ; 6                    ;
+;     -- Register only                        ; 0                    ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 4                    ;
+;     -- arithmetic mode                      ; 4                    ;
+;                                             ;                      ;
+; Total registers*                            ; 6 / 19,649 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 6 / 18,752 ( < 1 % ) ;
+;     -- I/O registers                        ; 0 / 897 ( 0 % )      ;
+;                                             ;                      ;
+; Total LABs:  partially or completely used   ; 1 / 1,172 ( < 1 % )  ;
+; User inserted logic elements                ; 0                    ;
+; Virtual pins                                ; 0                    ;
+; I/O pins                                    ; 8 / 315 ( 3 % )      ;
+;     -- Clock pins                           ; 1 / 8 ( 13 % )       ;
+; Global signals                              ; 2                    ;
+; M4Ks                                        ; 0 / 52 ( 0 % )       ;
+; Total block memory bits                     ; 0 / 239,616 ( 0 % )  ;
+; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )  ;
+; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )       ;
+; PLLs                                        ; 0 / 4 ( 0 % )        ;
+; Global clocks                               ; 2 / 16 ( 13 % )      ;
+; JTAGs                                       ; 0 / 1 ( 0 % )        ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
+; Maximum fan-out node                        ; clock~clkctrl        ;
+; Maximum fan-out                             ; 6                    ;
+; Highest non-global fan-out signal           ; LessThan1~1          ;
+; Highest non-global fan-out                  ; 5                    ;
+; Total fan-out                               ; 50                   ;
+; Average fan-out                             ; 1.85                 ;
++---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
@@ -245,61 +245,34 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 +-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                               ;
-+-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
-+-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; PWM         ; U22   ; 6        ; 50           ; 7            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[0]  ; U19   ; 6        ; 50           ; 4            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[10] ; R21   ; 6        ; 50           ; 10           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[11] ; N22   ; 6        ; 50           ; 12           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[12] ; V20   ; 6        ; 50           ; 4            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[13] ; T21   ; 6        ; 50           ; 9            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[14] ; W22   ; 6        ; 50           ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[15] ; AA19  ; 7        ; 48           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[16] ; U21   ; 6        ; 50           ; 7            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[17] ; N15   ; 6        ; 50           ; 11           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[18] ; R19   ; 6        ; 50           ; 8            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[19] ; AB19  ; 7        ; 48           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[1]  ; R14   ; 7        ; 42           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[20] ; R20   ; 6        ; 50           ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[21] ; T18   ; 6        ; 50           ; 3            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[22] ; V21   ; 6        ; 50           ; 6            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[23] ; K22   ; 5        ; 50           ; 15           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[24] ; Y21   ; 6        ; 50           ; 6            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[25] ; R22   ; 6        ; 50           ; 10           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[26] ; R17   ; 6        ; 50           ; 5            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[27] ; N21   ; 6        ; 50           ; 12           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[28] ; J20   ; 5        ; 50           ; 16           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[29] ; V22   ; 6        ; 50           ; 7            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[2]  ; T22   ; 6        ; 50           ; 9            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[30] ; L18   ; 5        ; 50           ; 15           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[31] ; P17   ; 6        ; 50           ; 8            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[3]  ; R18   ; 6        ; 50           ; 8            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[4]  ; P18   ; 6        ; 50           ; 9            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[5]  ; L19   ; 5        ; 50           ; 15           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[6]  ; Y22   ; 6        ; 50           ; 6            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[7]  ; V15   ; 7        ; 46           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[8]  ; P15   ; 6        ; 50           ; 11           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; counter[9]  ; AB20  ; 7        ; 48           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-+-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                              ;
++------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
++------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; PWM        ; D5    ; 2        ; 0            ; 24           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; counter[0] ; E7    ; 3        ; 5            ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; counter[1] ; F4    ; 2        ; 0            ; 23           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; counter[2] ; C1    ; 2        ; 0            ; 23           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; counter[3] ; C2    ; 2        ; 0            ; 23           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; counter[4] ; D3    ; 2        ; 0            ; 25           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
++------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
-+------------------------------------------------------------+
-; I/O Bank Usage                                             ;
-+----------+------------------+---------------+--------------+
-; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
-+----------+------------------+---------------+--------------+
-; 1        ; 2 / 41 ( 5 % )   ; 3.3V          ; --           ;
-; 2        ; 2 / 33 ( 6 % )   ; 3.3V          ; --           ;
-; 3        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
-; 4        ; 0 / 40 ( 0 % )   ; 3.3V          ; --           ;
-; 5        ; 4 / 39 ( 10 % )  ; 3.3V          ; --           ;
-; 6        ; 25 / 36 ( 69 % ) ; 3.3V          ; --           ;
-; 7        ; 5 / 40 ( 13 % )  ; 3.3V          ; --           ;
-; 8        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
-+----------+------------------+---------------+--------------+
++-----------------------------------------------------------+
+; I/O Bank Usage                                            ;
++----------+-----------------+---------------+--------------+
+; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
++----------+-----------------+---------------+--------------+
+; 1        ; 2 / 41 ( 5 % )  ; 3.3V          ; --           ;
+; 2        ; 7 / 33 ( 21 % ) ; 3.3V          ; --           ;
+; 3        ; 1 / 43 ( 2 % )  ; 3.3V          ; --           ;
+; 4        ; 0 / 40 ( 0 % )  ; 3.3V          ; --           ;
+; 5        ; 0 / 39 ( 0 % )  ; 3.3V          ; --           ;
+; 6        ; 1 / 36 ( 3 % )  ; 3.3V          ; --           ;
+; 7        ; 0 / 40 ( 0 % )  ; 3.3V          ; --           ;
+; 8        ; 0 / 43 ( 0 % )  ; 3.3V          ; --           ;
++----------+-----------------+---------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -347,7 +320,7 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; AA16     ; 140        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA17     ; 144        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA18     ; 153        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AA19     ; 162        ; 7        ; counter[15]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA19     ; 162        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA20     ; 164        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA21     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA22     ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -369,8 +342,8 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; AB16     ; 139        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB17     ; 143        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB18     ; 152        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AB19     ; 161        ; 7        ; counter[19]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AB20     ; 163        ; 7        ; counter[9]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB19     ; 161        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AB20     ; 163        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB21     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB22     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -395,8 +368,8 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; B20      ; 246        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B21      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C1       ; 8          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; C2       ; 9          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; C1       ; 8          ; 2        ; counter[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C2       ; 9          ; 2        ; counter[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; C3       ; 1          ; 2        ; ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; C4       ; 0          ; 2        ; ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; C5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -419,9 +392,9 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; C22      ; 237        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D1       ; 14         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D2       ; 15         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; D3       ; 2          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D3       ; 2          ; 2        ; counter[4]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; D4       ; 3          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; D5       ; 4          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D5       ; 4          ; 2        ; PWM                                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; D6       ; 5          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D7       ; 311        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D8       ; 309        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -445,7 +418,7 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; E4       ; 7          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E5       ;            ;          ; VCCD_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; E6       ;            ;          ; VCCA_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; E7       ; 316        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; E7       ; 316        ; 3        ; counter[0]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E8       ; 308        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E9       ; 301        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E10      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -464,7 +437,7 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; F1       ; 22         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F2       ; 23         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F3       ; 13         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F4       ; 10         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F4       ; 10         ; 2        ; counter[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F5       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F6       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F7       ;            ;          ; GNDA_PLL3                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -546,7 +519,7 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; J17      ; 218        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J18      ; 217        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J19      ; 216        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J20      ; 213        ; 5        ; counter[28]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J20      ; 213        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J21      ; 211        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J22      ; 212        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K1       ; 37         ; 2        ; ^nCE                                     ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -570,7 +543,7 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; K19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; K20      ; 215        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K21      ; 209        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K22      ; 210        ; 5        ; counter[23]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; K22      ; 210        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L1       ; 38         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; L2       ; 39         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; L3       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -588,8 +561,8 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; L15      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L16      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L17      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; L18      ; 208        ; 5        ; counter[30]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; L19      ; 207        ; 5        ; counter[5]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L18      ; 208        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; L19      ; 207        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L20      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; L21      ; 205        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; L22      ; 206        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -629,14 +602,14 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; N12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N14      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; N15      ; 194        ; 6        ; counter[17]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N15      ; 194        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N16      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N17      ; 197        ; 6        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N18      ; 196        ; 6        ; ^CONF_DONE                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N20      ; 195        ; 6        ; ^nSTATUS                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; N21      ; 199        ; 6        ; counter[27]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; N22      ; 200        ; 6        ; counter[11]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N21      ; 199        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N22      ; 200        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P1       ; 47         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P2       ; 48         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P3       ; 50         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -651,10 +624,10 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; P12      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; P13      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; P14      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; P15      ; 193        ; 6        ; counter[8]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P15      ; 193        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P16      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; P17      ; 186        ; 6        ; counter[31]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; P18      ; 187        ; 6        ; counter[4]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P17      ; 186        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P18      ; 187        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P19      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P20      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P21      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -672,15 +645,15 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; R11      ; 116        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R12      ; 134        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R13      ; 145        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; R14      ; 150        ; 7        ; counter[1]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; R14      ; 150        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R15      ; 151        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R16      ; 155        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; R17      ; 177        ; 6        ; counter[26]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R18      ; 184        ; 6        ; counter[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R19      ; 185        ; 6        ; counter[18]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R20      ; 192        ; 6        ; counter[20]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R21      ; 190        ; 6        ; counter[10]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R22      ; 191        ; 6        ; counter[25]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R17      ; 177        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R18      ; 184        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R19      ; 185        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R20      ; 192        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R21      ; 190        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R22      ; 191        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T1       ; 59         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T2       ; 60         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T3       ; 69         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -698,11 +671,11 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; T15      ; 147        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T16      ; 156        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; T17      ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; T18      ; 171        ; 6        ; counter[21]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T18      ; 171        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T19      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; T20      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; T21      ; 188        ; 6        ; counter[13]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T22      ; 189        ; 6        ; counter[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T21      ; 188        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T22      ; 189        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U1       ; 61         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U2       ; 62         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U3       ; 70         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -721,10 +694,10 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; U16      ;            ;          ; VCCA_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U17      ;            ;          ; VCCD_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U18      ; 170        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U19      ; 172        ; 6        ; counter[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U19      ; 172        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U20      ; 176        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U21      ; 182        ; 6        ; counter[16]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U22      ; 183        ; 6        ; PWM                                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U21      ; 182        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U22      ; 183        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V1       ; 65         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V2       ; 66         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V3       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -739,14 +712,14 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; V12      ; 126        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; V13      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V14      ; 142        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; V15      ; 158        ; 7        ; counter[7]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; V15      ; 158        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V16      ;            ;          ; GNDA_PLL4                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V17      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V18      ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V19      ; 166        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V20      ; 173        ; 6        ; counter[12]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V21      ; 180        ; 6        ; counter[22]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V22      ; 181        ; 6        ; counter[29]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V20      ; 173        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V21      ; 180        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V22      ; 181        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W1       ; 71         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W2       ; 72         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W3       ; 75         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -768,7 +741,7 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; W19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W20      ; 167        ; 6        ; ~LVDS91p/nCEO~                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; W21      ; 174        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W22      ; 175        ; 6        ; counter[14]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W22      ; 175        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y1       ; 73         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ; 74         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y3       ; 77         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -789,8 +762,8 @@ The pin-out file can be found in C:/Users/Student/Desktop/PWM/output_files/PWM.p
 ; Y18      ; 165        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y19      ; 168        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y20      ; 169        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y21      ; 178        ; 6        ; counter[24]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; Y22      ; 179        ; 6        ; counter[6]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y21      ; 178        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; Y22      ; 179        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
@@ -837,52 +810,25 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |pwm2                      ; 45 (45)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 35   ; 0            ; 12 (12)      ; 0 (0)             ; 33 (33)          ; |pwm2               ; work         ;
+; |pwm2                      ; 8 (8)       ; 6 (6)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 8    ; 0            ; 2 (2)        ; 0 (0)             ; 6 (6)            ; |pwm2               ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                  ;
-+-------------+----------+---------------+---------------+-----------------------+-----+
-; Name        ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
-+-------------+----------+---------------+---------------+-----------------------+-----+
-; PWM         ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[0]  ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[1]  ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[2]  ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[3]  ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[4]  ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[5]  ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[6]  ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[7]  ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[8]  ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[9]  ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[10] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[11] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[12] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[13] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[14] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[15] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[16] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[17] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[18] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[19] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[20] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[21] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[22] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[23] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[24] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[25] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[26] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[27] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[28] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[29] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[30] ; Output   ; --            ; --            ; --                    ; --  ;
-; counter[31] ; Output   ; --            ; --            ; --                    ; --  ;
-; clock       ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
-; reset       ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
-+-------------+----------+---------------+---------------+-----------------------+-----+
++-------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                 ;
++------------+----------+---------------+---------------+-----------------------+-----+
+; Name       ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++------------+----------+---------------+---------------+-----------------------+-----+
+; PWM        ; Output   ; --            ; --            ; --                    ; --  ;
+; counter[0] ; Output   ; --            ; --            ; --                    ; --  ;
+; counter[1] ; Output   ; --            ; --            ; --                    ; --  ;
+; counter[2] ; Output   ; --            ; --            ; --                    ; --  ;
+; counter[3] ; Output   ; --            ; --            ; --                    ; --  ;
+; counter[4] ; Output   ; --            ; --            ; --                    ; --  ;
+; clock      ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
+; reset      ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
++------------+----------+---------------+---------------+-----------------------+-----+
 
 
 +---------------------------------------------------+
@@ -895,15 +841,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                          ;
-+--------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name         ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; LessThan1~10 ; LCCOMB_X48_Y7_N14 ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; clock        ; PIN_M1            ; 33      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; reset        ; PIN_M2            ; 33      ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-+--------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                         ;
++-------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name        ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; LessThan1~1 ; LCCOMB_X5_Y23_N28 ; 5       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; clock       ; PIN_M1            ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; reset       ; PIN_M2            ; 6       ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
++-------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -911,67 +857,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
-; clock ; PIN_M1   ; 33      ; Global Clock         ; GCLK3            ; --                        ;
-; reset ; PIN_M2   ; 33      ; Global Clock         ; GCLK1            ; --                        ;
+; clock ; PIN_M1   ; 6       ; Global Clock         ; GCLK3            ; --                        ;
+; reset ; PIN_M2   ; 6       ; Global Clock         ; GCLK1            ; --                        ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------+
 ; Non-Global High Fan-Out Signals ;
-+------------------+--------------+
-; Name             ; Fan-Out      ;
-+------------------+--------------+
-; LessThan1~10     ; 32           ;
-; counter[4]~reg0  ; 4            ;
-; counter[3]~reg0  ; 4            ;
-; counter[2]~reg0  ; 4            ;
-; counter[1]~reg0  ; 4            ;
-; counter[31]~reg0 ; 3            ;
-; counter[30]~reg0 ; 3            ;
-; counter[29]~reg0 ; 3            ;
-; counter[28]~reg0 ; 3            ;
-; counter[27]~reg0 ; 3            ;
-; counter[26]~reg0 ; 3            ;
-; counter[25]~reg0 ; 3            ;
-; counter[24]~reg0 ; 3            ;
-; counter[23]~reg0 ; 3            ;
-; counter[22]~reg0 ; 3            ;
-; counter[21]~reg0 ; 3            ;
-; counter[20]~reg0 ; 3            ;
-; counter[19]~reg0 ; 3            ;
-; counter[18]~reg0 ; 3            ;
-; counter[17]~reg0 ; 3            ;
-; counter[16]~reg0 ; 3            ;
-; counter[15]~reg0 ; 3            ;
-; counter[14]~reg0 ; 3            ;
-; counter[13]~reg0 ; 3            ;
-; counter[12]~reg0 ; 3            ;
-; counter[11]~reg0 ; 3            ;
-; counter[10]~reg0 ; 3            ;
-; counter[9]~reg0  ; 3            ;
-; counter[8]~reg0  ; 3            ;
-; counter[7]~reg0  ; 3            ;
-; counter[6]~reg0  ; 3            ;
-; counter[5]~reg0  ; 3            ;
-; counter[0]~reg0  ; 3            ;
-; LessThan1~7      ; 2            ;
-; LessThan1~5      ; 2            ;
-; LessThan1~4      ; 2            ;
-; LessThan1~9      ; 1            ;
-; LessThan1~8      ; 1            ;
-; LessThan0~1      ; 1            ;
-; LessThan1~6      ; 1            ;
-; LessThan1~3      ; 1            ;
-; LessThan1~2      ; 1            ;
-; LessThan1~1      ; 1            ;
-; LessThan1~0      ; 1            ;
-; LessThan0~0      ; 1            ;
-; PWM~reg0         ; 1            ;
-; counter[31]~94   ; 1            ;
-; counter[30]~93   ; 1            ;
-; counter[30]~92   ; 1            ;
-; counter[29]~91   ; 1            ;
-+------------------+--------------+
++-----------------+---------------+
+; Name            ; Fan-Out       ;
++-----------------+---------------+
+; LessThan1~1     ; 5             ;
+; counter[4]~reg0 ; 4             ;
+; counter[3]~reg0 ; 4             ;
+; counter[2]~reg0 ; 4             ;
+; counter[1]~reg0 ; 4             ;
+; counter[0]~reg0 ; 3             ;
+; LessThan1~0     ; 1             ;
+; LessThan0~0     ; 1             ;
+; PWM~reg0        ; 1             ;
+; counter[4]~13   ; 1             ;
+; counter[3]~12   ; 1             ;
+; counter[3]~11   ; 1             ;
+; counter[2]~10   ; 1             ;
+; counter[2]~9    ; 1             ;
+; counter[1]~8    ; 1             ;
+; counter[1]~7    ; 1             ;
+; counter[0]~6    ; 1             ;
+; counter[0]~5    ; 1             ;
++-----------------+---------------+
 
 
 +----------------------------------------------------+
@@ -979,59 +893,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-----------------------+
 ; Interconnect Resource Type ; Usage                 ;
 +----------------------------+-----------------------+
-; Block interconnects        ; 71 / 54,004 ( < 1 % ) ;
+; Block interconnects        ; 10 / 54,004 ( < 1 % ) ;
 ; C16 interconnects          ; 0 / 2,100 ( 0 % )     ;
-; C4 interconnects           ; 59 / 36,000 ( < 1 % ) ;
-; Direct links               ; 9 / 54,004 ( < 1 % )  ;
+; C4 interconnects           ; 3 / 36,000 ( < 1 % )  ;
+; Direct links               ; 4 / 54,004 ( < 1 % )  ;
 ; Global clocks              ; 2 / 16 ( 13 % )       ;
-; Local interconnects        ; 42 / 18,752 ( < 1 % ) ;
+; Local interconnects        ; 6 / 18,752 ( < 1 % )  ;
 ; R24 interconnects          ; 0 / 1,900 ( 0 % )     ;
-; R4 interconnects           ; 31 / 46,920 ( < 1 % ) ;
+; R4 interconnects           ; 8 / 46,920 ( < 1 % )  ;
 +----------------------------+-----------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Logic Elements                                                        ;
-+---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 11.25) ; Number of LABs  (Total = 4) ;
-+---------------------------------------------+-----------------------------+
-; 1                                           ; 1                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 1                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 2                           ;
-+---------------------------------------------+-----------------------------+
++--------------------------------------------------------------------------+
+; LAB Logic Elements                                                       ;
++--------------------------------------------+-----------------------------+
+; Number of Logic Elements  (Average = 8.00) ; Number of LABs  (Total = 1) ;
++--------------------------------------------+-----------------------------+
+; 1                                          ; 0                           ;
+; 2                                          ; 0                           ;
+; 3                                          ; 0                           ;
+; 4                                          ; 0                           ;
+; 5                                          ; 0                           ;
+; 6                                          ; 0                           ;
+; 7                                          ; 0                           ;
+; 8                                          ; 1                           ;
+; 9                                          ; 0                           ;
+; 10                                         ; 0                           ;
+; 11                                         ; 0                           ;
+; 12                                         ; 0                           ;
+; 13                                         ; 0                           ;
+; 14                                         ; 0                           ;
+; 15                                         ; 0                           ;
+; 16                                         ; 0                           ;
++--------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 4) ;
+; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 1) ;
 +------------------------------------+-----------------------------+
-; 1 Async. clear                     ; 3                           ;
-; 1 Clock                            ; 3                           ;
-; 1 Sync. clear                      ; 2                           ;
+; 1 Async. clear                     ; 1                           ;
+; 1 Clock                            ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 19.50) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced  (Average = 14.00) ; Number of LABs  (Total = 1) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
-; 1                                            ; 1                           ;
+; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
@@ -1043,92 +956,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
-; 13                                           ; 1                           ;
-; 14                                           ; 0                           ;
-; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
-; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
-; 19                                           ; 0                           ;
-; 20                                           ; 0                           ;
-; 21                                           ; 0                           ;
-; 22                                           ; 0                           ;
-; 23                                           ; 0                           ;
-; 24                                           ; 0                           ;
-; 25                                           ; 0                           ;
-; 26                                           ; 0                           ;
-; 27                                           ; 0                           ;
-; 28                                           ; 0                           ;
-; 29                                           ; 0                           ;
-; 30                                           ; 0                           ;
-; 31                                           ; 0                           ;
-; 32                                           ; 2                           ;
+; 13                                           ; 0                           ;
+; 14                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 8.75) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced Out  (Average = 6.00) ; Number of LABs  (Total = 1) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 1                           ;
-; 2                                               ; 1                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 0                           ;
 ; 3                                               ; 0                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
-; 6                                               ; 0                           ;
-; 7                                               ; 0                           ;
-; 8                                               ; 0                           ;
-; 9                                               ; 0                           ;
-; 10                                              ; 0                           ;
-; 11                                              ; 0                           ;
-; 12                                              ; 0                           ;
-; 13                                              ; 0                           ;
-; 14                                              ; 0                           ;
-; 15                                              ; 0                           ;
-; 16                                              ; 2                           ;
+; 6                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 10.50) ; Number of LABs  (Total = 4) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 1                           ;
-; 4                                            ; 2                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
-; 11                                           ; 0                           ;
-; 12                                           ; 0                           ;
-; 13                                           ; 0                           ;
-; 14                                           ; 0                           ;
-; 15                                           ; 0                           ;
-; 16                                           ; 0                           ;
-; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
-; 19                                           ; 0                           ;
-; 20                                           ; 0                           ;
-; 21                                           ; 0                           ;
-; 22                                           ; 0                           ;
-; 23                                           ; 0                           ;
-; 24                                           ; 0                           ;
-; 25                                           ; 0                           ;
-; 26                                           ; 0                           ;
-; 27                                           ; 0                           ;
-; 28                                           ; 0                           ;
-; 29                                           ; 0                           ;
-; 30                                           ; 0                           ;
-; 31                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
++---------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                       ;
++---------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 2.00) ; Number of LABs  (Total = 1) ;
++---------------------------------------------+-----------------------------+
+; 0                                           ; 0                           ;
+; 1                                           ; 0                           ;
+; 2                                           ; 1                           ;
++---------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -1173,7 +1029,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Tue Jun 07 13:51:12 2016
+    Info: Processing started: Tue Jun 07 15:13:58 2016
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off PWM -c PWM
 Info: Selected device EP2C20F484C7 for design "PWM"
 Info: Low junction temperature is 0 degrees C
@@ -1188,40 +1044,13 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~ASDO~ is reserved at location C4
     Info: Pin ~nCSO~ is reserved at location C3
     Info: Pin ~LVDS91p/nCEO~ is reserved at location W20
-Critical Warning: No exact pin location assignment(s) for 35 pins of 35 total pins
+Critical Warning: No exact pin location assignment(s) for 8 pins of 8 total pins
     Info: Pin PWM not assigned to an exact location on the device
     Info: Pin counter[0] not assigned to an exact location on the device
     Info: Pin counter[1] not assigned to an exact location on the device
     Info: Pin counter[2] not assigned to an exact location on the device
     Info: Pin counter[3] not assigned to an exact location on the device
     Info: Pin counter[4] not assigned to an exact location on the device
-    Info: Pin counter[5] not assigned to an exact location on the device
-    Info: Pin counter[6] not assigned to an exact location on the device
-    Info: Pin counter[7] not assigned to an exact location on the device
-    Info: Pin counter[8] not assigned to an exact location on the device
-    Info: Pin counter[9] not assigned to an exact location on the device
-    Info: Pin counter[10] not assigned to an exact location on the device
-    Info: Pin counter[11] not assigned to an exact location on the device
-    Info: Pin counter[12] not assigned to an exact location on the device
-    Info: Pin counter[13] not assigned to an exact location on the device
-    Info: Pin counter[14] not assigned to an exact location on the device
-    Info: Pin counter[15] not assigned to an exact location on the device
-    Info: Pin counter[16] not assigned to an exact location on the device
-    Info: Pin counter[17] not assigned to an exact location on the device
-    Info: Pin counter[18] not assigned to an exact location on the device
-    Info: Pin counter[19] not assigned to an exact location on the device
-    Info: Pin counter[20] not assigned to an exact location on the device
-    Info: Pin counter[21] not assigned to an exact location on the device
-    Info: Pin counter[22] not assigned to an exact location on the device
-    Info: Pin counter[23] not assigned to an exact location on the device
-    Info: Pin counter[24] not assigned to an exact location on the device
-    Info: Pin counter[25] not assigned to an exact location on the device
-    Info: Pin counter[26] not assigned to an exact location on the device
-    Info: Pin counter[27] not assigned to an exact location on the device
-    Info: Pin counter[28] not assigned to an exact location on the device
-    Info: Pin counter[29] not assigned to an exact location on the device
-    Info: Pin counter[30] not assigned to an exact location on the device
-    Info: Pin counter[31] not assigned to an exact location on the device
     Info: Pin clock not assigned to an exact location on the device
     Info: Pin reset not assigned to an exact location on the device
 Info: Timing-driven compilation is using the Classic Timing Analyzer
@@ -1240,7 +1069,7 @@ Extra Info: Finished moving registers into I/O cells, Multiplier Blocks, and RAM
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
 Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info: Number of I/O pins in group: 33 (unused VREF, 3.3V VCCIO, 0 input, 33 output, 0 bidirectional)
+    Info: Number of I/O pins in group: 6 (unused VREF, 3.3V VCCIO, 0 input, 6 output, 0 bidirectional)
         Info: I/O standards used: 3.3-V LVTTL.
 Info: I/O bank details before I/O pin placement
     Info: Statistics of I/O banks
@@ -1258,63 +1087,35 @@ Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:00
-Info: Estimated most critical path is register to register delay of 4.113 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X49_Y8; Fanout = 5; REG Node = 'counter[2]~reg0'
-    Info: 2: + IC(0.991 ns) + CELL(0.322 ns) = 1.313 ns; Loc. = LAB_X48_Y7; Fanout = 1; COMB Node = 'LessThan1~8'
-    Info: 3: + IC(0.131 ns) + CELL(0.545 ns) = 1.989 ns; Loc. = LAB_X48_Y7; Fanout = 1; COMB Node = 'LessThan1~9'
-    Info: 4: + IC(0.498 ns) + CELL(0.178 ns) = 2.665 ns; Loc. = LAB_X48_Y7; Fanout = 32; COMB Node = 'LessThan1~10'
-    Info: 5: + IC(0.868 ns) + CELL(0.580 ns) = 4.113 ns; Loc. = LAB_X49_Y8; Fanout = 4; REG Node = 'counter[0]~reg0'
-    Info: Total cell delay = 1.625 ns ( 39.51 % )
-    Info: Total interconnect delay = 2.488 ns ( 60.49 % )
+Info: Estimated most critical path is register to register delay of 2.192 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X5_Y23; Fanout = 5; REG Node = 'counter[2]~reg0'
+    Info: 2: + IC(0.416 ns) + CELL(0.322 ns) = 0.738 ns; Loc. = LAB_X5_Y23; Fanout = 1; COMB Node = 'LessThan1~0'
+    Info: 3: + IC(0.131 ns) + CELL(0.449 ns) = 1.318 ns; Loc. = LAB_X5_Y23; Fanout = 5; COMB Node = 'LessThan1~1'
+    Info: 4: + IC(0.294 ns) + CELL(0.580 ns) = 2.192 ns; Loc. = LAB_X5_Y23; Fanout = 4; REG Node = 'counter[0]~reg0'
+    Info: Total cell delay = 1.351 ns ( 61.63 % )
+    Info: Total interconnect delay = 0.841 ns ( 38.37 % )
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X38_Y0 to location X50_Y13
+    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y14 to location X11_Y27
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
     Info: Optimizations that may affect the design's timing were skipped
 Info: Started post-fitting delay annotation
-Warning: Found 33 output pins without output pin load capacitance assignment
+Warning: Found 6 output pins without output pin load capacitance assignment
     Info: Pin "PWM" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "counter[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "counter[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "counter[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "counter[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info: Pin "counter[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[16]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[17]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[18]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[19]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[20]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[21]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[22]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[23]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[24]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[25]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[26]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[27]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[28]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[29]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[30]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "counter[31]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info: Delay annotation completed successfully
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 235 megabytes
-    Info: Processing ended: Tue Jun 07 13:51:15 2016
+    Info: Peak virtual memory: 234 megabytes
+    Info: Processing ended: Tue Jun 07 15:14:01 2016
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
