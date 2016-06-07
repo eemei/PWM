@@ -1,6 +1,6 @@
 module PWM_tb2 ();
 
-reg enPWM, reset, clock;
+reg reset, clock;
 wire PWM;
 wire[31:0] count;
 
@@ -15,6 +15,6 @@ always
 #1 clock =~clock;
 
 //..connect module to test bench..
- pwm2 pmwtb2( enPWM, reset, clock, PWM, count);
+ pwm2 pmwtb2( reset, clock, PWM, count);
 
 endmodule 
