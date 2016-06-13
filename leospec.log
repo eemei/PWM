@@ -1,0 +1,167 @@
+LeonardoSpectrum Level 3 - 2012b.6 (Release Production Release, compiled Aug  8 2012 at 15:10:47)
+Copyright 1990-2010 Mentor Graphics.  All rights reserved.
+Portions copyright 1991-2010 Compuware Corporation
+
+--
+-- Welcome to LeonardoSpectrum Level 3
+-- Run By Student@USER2-PC
+-- Run Started On Mon Jun 13 13:52:57 Malay Peninsula Standard Time 2016
+--
+-- Reading file 'C:/Users/Student/Desktop/PWM/pwm2.v'...
+-- Loading module 'pwm2'
+-- Compiling root module 'pwm2'
+-- Boundary optimization.
+-- Start pre-optimization for design .work.pwm2.INTERFACE
+"C:/Users/Student/Desktop/PWM/pwm2.v", line 27:Info, Inferred counter instance 'counter' of type 'counter_up_sclear_aclear_clock_5'
+-- Start pre-optimization for design .work.pwm2.INTERFACE
+-- Reading file 'C:/Users/Student/Desktop/PWM/pwm2.v'...
+-- Loading module 'pwm2'
+Warning, replacing pwm2 in HDL library work.
+-- Compiling root module 'pwm2'
+-- Info, replacing pwm2(INTERFACE)
+-- Boundary optimization.
+-- Start pre-optimization for design .work.pwm2.INTERFACE
+"C:/Users/Student/Desktop/PWM/pwm2.v", line 27:Info, Inferred counter instance 'counter' of type 'counter_up_sclear_aclear_clock_5'
+-- Start pre-optimization for design .work.pwm2.INTERFACE
+Info: optimize: library 'gdk_typ' has not yet been loaded, it will now be loaded
+Reading library file `C:\MGC\LeoSpec\LS2012b_6\\lib\gdk_typ.syn`...
+Library version = 1.0 GDK Release : July 18, 2012
+Delays assume: Process=typical Temp= 27.0 C  Voltage=1.80 V  
+Info: setting encoding to auto
+NO wire table is found
+-- Optimizing netlist .work.pwm2.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+Cap DRC violation can not be fixed on net .work.pwm2.INTERFACE.nx196
+ constraint: 0.200 actual: 0.500 (net cap 0.000) driving cell: buf02
+Transition time DRC violation can not be fixed on net .work.pwm2.INTERFACE.nx196
+ constraint: 1.000 actual: 1.840 driving cell: buf02
+Cap DRC violation can not be fixed on net .work.pwm2.INTERFACE.nx200
+ constraint: 0.200 actual: 0.500 (net cap 0.000) driving cell: inv01
+Transition time DRC violation can not be fixed on net .work.pwm2.INTERFACE.nx200
+ constraint: 1.000 actual: 3.379 driving cell: inv01
+Cap DRC violation can not be fixed on net .work.pwm2.INTERFACE.nx204
+ constraint: 0.200 actual: 0.500 (net cap 0.000) driving cell: buf02
+Transition time DRC violation can not be fixed on net .work.pwm2.INTERFACE.nx204
+ constraint: 1.000 actual: 1.840 driving cell: buf02
+Cap DRC violation can not be fixed on net .work.pwm2.INTERFACE.nx208
+ constraint: 0.200 actual: 0.500 (net cap 0.000) driving cell: buf02
+Transition time DRC violation can not be fixed on net .work.pwm2.INTERFACE.nx208
+ constraint: 1.000 actual: 1.840 driving cell: buf02
+Cap DRC violation can not be fixed on net .work.pwm2.INTERFACE.nx212
+ constraint: 0.200 actual: 0.500 (net cap 0.000) driving cell: buf02
+Transition time DRC violation can not be fixed on net .work.pwm2.INTERFACE.nx212
+ constraint: 1.000 actual: 1.840 driving cell: buf02
+-- Start timing optimization for design .work.pwm2.INTERFACE
+No critical paths to optimize at this level
+NO wire table is found
+-- Optimizing netlist .work.pwm2.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Final Design Rule Check..
+Cap DRC violation can not be fixed on net .work.pwm2.INTERFACE.counter(4)
+ constraint: 0.200 actual: 0.500 (net cap 0.000) driving cell: buf02
+Transition time DRC violation can not be fixed on net .work.pwm2.INTERFACE.counter(4)
+ constraint: 1.000 actual: 1.840 driving cell: buf02
+Cap DRC violation can not be fixed on net .work.pwm2.INTERFACE.counter(3)
+ constraint: 0.200 actual: 0.500 (net cap 0.000) driving cell: inv01
+Transition time DRC violation can not be fixed on net .work.pwm2.INTERFACE.counter(3)
+ constraint: 1.000 actual: 3.379 driving cell: inv01
+Cap DRC violation can not be fixed on net .work.pwm2.INTERFACE.counter(2)
+ constraint: 0.200 actual: 0.500 (net cap 0.000) driving cell: buf02
+Transition time DRC violation can not be fixed on net .work.pwm2.INTERFACE.counter(2)
+ constraint: 1.000 actual: 1.840 driving cell: buf02
+Cap DRC violation can not be fixed on net .work.pwm2.INTERFACE.counter(1)
+ constraint: 0.200 actual: 0.500 (net cap 0.000) driving cell: buf02
+Transition time DRC violation can not be fixed on net .work.pwm2.INTERFACE.counter(1)
+ constraint: 1.000 actual: 1.840 driving cell: buf02
+Cap DRC violation can not be fixed on net .work.pwm2.INTERFACE.counter(0)
+ constraint: 0.200 actual: 0.500 (net cap 0.000) driving cell: buf02
+Transition time DRC violation can not be fixed on net .work.pwm2.INTERFACE.counter(0)
+ constraint: 1.000 actual: 1.840 driving cell: buf02
+-- Start timing optimization for design .work.pwm2.INTERFACE
+No critical paths to optimize at this level
+
+*******************************************************
+
+Cell: pwm2    View: INTERFACE    Library: work
+
+*******************************************************
+
+
+ Cell      Library  References     Total Area
+
+and02      gdk_typ     1 x      1      1 gates
+and03      gdk_typ     1 x      2      2 gates
+aoi21      gdk_typ     2 x      1      2 gates
+buf02      gdk_typ     8 x      1      8 gates
+dffr       gdk_typ     6 x      5     32 gates
+inv01      gdk_typ     6 x      1      5 gates
+nand02     gdk_typ     3 x      1      3 gates
+nand03     gdk_typ     1 x      1      1 gates
+nand04     gdk_typ     1 x      1      1 gates
+nor02      gdk_typ     1 x      1      1 gates
+nor02ii    gdk_typ     1 x      1      1 gates
+nor03      gdk_typ     1 x      1      1 gates
+nor04      gdk_typ     1 x      1      1 gates
+oai21      gdk_typ     1 x      1      1 gates
+xnor2      gdk_typ     1 x      2      2 gates
+
+ Number of ports :                       8
+ Number of nets :                       37
+ Number of instances :                  35
+ Number of references to this view :     0
+
+Total accumulated area : 
+ Number of gates :                      63
+ Number of accumulated instances :      35
+NO wire table is found
+
+
+
+                        Clock Frequency Report
+
+	Clock                : Frequency
+      ------------------------------------
+
+	clock                : 513.3 MHz
+
+
+                        Critical Path Report
+
+
+Critical path #1, (path slack =  0.4):
+
+NAME                                 GATE              ARRIVAL              LOAD
+--------------------------------------------------------------------------------
+clock (offset)                                                    0.00 (rising edge)
+delay thru clock network                               0.00 (ideal)
+reg_counter(3)/CLK                   dffr              0.00 (rising edge)
+
+
+reg_counter(3)/QB                    dffr        0.00  0.22 dn             0.02
+ix199/Y                              inv01       1.73  1.95 up             0.50
+counter(3)/                                      0.00  1.95 up             0.00
+data arrival time                                      1.95
+
+data required time                                     2.30
+--------------------------------------------------------------------------------
+data required time                                     2.30
+data arrival time                                      1.95
+                                                    ----------
+slack                                                 0.35
+--------------------------------------------------------------------------------
+
+
+Info: setting novendor_constraint_file to FALSE
+AutoWrite args are : -format Verilog pwm2_0.v
+-- Writing file pwm2_0.v
+Info: setting novendor_constraint_file to FALSE
+AutoWrite args are : -format Verilog pwm2_0_NETLIST.v
+-- Writing file pwm2_0_NETLIST.v
